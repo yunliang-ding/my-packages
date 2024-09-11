@@ -1,0 +1,40 @@
+.yld-message {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 40px);
+  z-index: 930226;
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 10px;
+  background: var(--bg-color);
+  border-radius: 2px;
+  box-shadow: 0 0 5px 0px var(--box-shadow);
+  transition: 0.4s;
+  border: 1px solid var(--border-color);
+  &-content {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 100%;
+    color: var(--text-color);
+    font-size: var(--font-size);
+    white-space: nowrap;
+    &-message {
+      width: calc(100% - 30px);
+      font-size: var(--font-size);
+    }
+    .yld-icon-close {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      transition: 0.3s;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+        transition: 0.3s;
+      }
+    }
+  }
+}

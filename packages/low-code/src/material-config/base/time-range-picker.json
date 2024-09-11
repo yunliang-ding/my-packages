@@ -1,0 +1,35 @@
+{
+  "type": "RangeTimePicker",
+  "label": "时间区间",
+  "props": {
+    "placeholder": "请选择",
+    "allowClear": true,
+    "disabled": false
+  },
+  "propsConfig": [
+    {
+      "type": "Switch",
+      "name": "disabled",
+      "label": "是否禁用"
+    },
+    {
+      "type": "Switch",
+      "name": "allowClear",
+      "label": "是否允许清除"
+    },
+    {
+      "type": "Input",
+      "name": "placeholder",
+      "label": "提示文案"
+    },
+    {
+      "type": "CodeEditor",
+      "name": "onChange",
+      "label": "设置onChange",
+      "props": {
+        "mode": "function",
+        "useEncrypt": true
+      }
+    }
+  ]
+}

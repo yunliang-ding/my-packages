@@ -1,0 +1,22 @@
+.yld-layer {
+  position: absolute;
+  z-index: 999;
+  overflow: auto;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px var(--box-shadow);
+  border: 1px solid var(--border-color);
+  .yld-menu-vertical{
+    max-height: 200px;
+    height: fit-content;
+    overflow: auto;
+    .yld-menu-vertical-subMenu-label{
+      line-height: 40px;
+      width: 100% !important;
+      padding: 0 20px !important;
+      display: inline-block !important;
+      white-space: nowrap !important;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "type": "Switch",
+  "label": "开关",
+  "props": {
+    "disabled": false,
+    "checkedText": "打开",
+    "uncheckedText": "关闭"
+  },
+  "propsConfig": [
+    {
+      "type": "Switch",
+      "name": "disabled",
+      "label": "是否禁用"
+    },
+    {
+      "type": "Input",
+      "name": "checkedText",
+      "label": "打开文案"
+    },
+    {
+      "type": "Input",
+      "name": "uncheckedText",
+      "label": "关闭文案"
+    },
+    {
+      "type": "CodeEditor",
+      "name": "onChange",
+      "label": "设置onChange",
+      "props": {
+        "mode": "function",
+        "useEncrypt": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "Rate",
+  "label": "评分组件",
+  "props": {
+    "disabled": false
+  },
+  "propsConfig": [
+    {
+      "type": "Switch",
+      "name": "disabled",
+      "label": "是否禁用"
+    },
+    {
+      "type": "CodeEditor",
+      "name": "onChange",
+      "label": "设置onChange",
+      "props": {
+        "mode": "function",
+        "useEncrypt": true
+      }
+    }
+  ]
+}

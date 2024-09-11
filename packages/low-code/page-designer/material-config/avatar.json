@@ -1,0 +1,44 @@
+{
+  "type": "Avatar",
+  "label": "头像",
+  "props": {
+    "shape": "circle",
+    "size": 40,
+    "gap": 10,
+    "src": "https://joeschmoe.io/api/v1/random"
+  },
+  "propsConfig": [
+    {
+      "type": "RadioGroup",
+      "name": "shape",
+      "label": "形状",
+      "props": {
+        "options": [
+          {
+            "label": "圆角",
+            "value": "circle"
+          },
+          {
+            "label": "矩形",
+            "value": "square"
+          }
+        ]
+      }
+    },
+    {
+      "type": "InputNumber",
+      "name": "size",
+      "label": "尺寸"
+    },
+    {
+      "type": "InputNumber",
+      "name": "gap",
+      "label": "间隙"
+    },
+    {
+      "type": "Input",
+      "name": "src",
+      "label": "资源地址"
+    }
+  ]
+}

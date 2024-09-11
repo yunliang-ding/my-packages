@@ -1,0 +1,101 @@
+.yld-switch-checked,
+.yld-switch {
+  position: relative;
+  display: inline-block;
+  min-width: 40px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  font-variant: tabular-nums;
+  line-height: 24px;
+  vertical-align: middle;
+  list-style: none;
+  background-color: var(--bg-color-3);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.36s;
+  user-select: none;
+  .yld-switch-inner {
+    display: block;
+    margin-right: 6px;
+    margin-left: 24px;
+    position: relative;
+    top: -1.5px;
+    color: var(--text-color);
+    font-size: var(--font-size);
+  }
+  .yld-click-animating-node {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 var(--primary-color);
+    opacity: 0.2;
+    content: '';
+    pointer-events: none;
+  }
+  &::after {
+    box-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
+  }
+  &::after {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 0.36s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    transition: all 0.36s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    content: ' ';
+  }
+  .yld-icon-loading {
+    position: absolute;
+    top: 6px;
+    right: 26px;
+    z-index: 2;
+    color: var(--primary-color);
+    font-size: var(--font-size);
+  }
+}
+.yld-switch-checked {
+  background-color: var(--primary-color);
+  .yld-switch-inner {
+    color: #fff;
+    margin-right: 24px;
+    margin-left: 6px;
+  }
+  &::after {
+    left: 100%;
+    margin-left: -3px;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+.yld-switch-disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  background-color: var(--bg-color-3);
+}
+.yld-switch-checked.yld-switch-disabled{
+  background-color: var(--primary-color);
+}
+.yld-switch-checked {
+  .yld-icon-loading {
+    position: absolute;
+    top: 6px;
+    right: auto;
+    left: 26px;
+    z-index: 2;
+    color: var(--primary-color);
+    font-size: var(--font-size);
+  }
+}

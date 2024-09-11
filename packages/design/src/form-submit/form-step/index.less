@@ -1,0 +1,35 @@
+.yld-step-form {
+  background: var(--bg-color);
+  padding: 20px;
+  position: relative;
+  .step-item-hidden {
+    display: none;
+  }
+  &-body {
+    padding: 40px 0px;
+  }
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.yld-modal-body {
+  .yld-step-form {
+    height: 100%;
+    box-sizing: border-box;
+    &-header {
+      height: 60px;
+      padding: 0;
+    }
+    &-body {
+      padding: 0 20px;
+      height: calc(100% - 120px);
+      overflow: auto;
+    }
+    &-footer {
+      padding: 0 20px;
+      height: 60px;
+    }
+  }
+}

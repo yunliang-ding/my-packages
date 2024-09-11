@@ -1,0 +1,5 @@
+#npmignore
+!/dist
+/src
+tsconfig.json
+build.js

@@ -1,0 +1,183 @@
+.yld-time-picker {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 120px;
+  background-color: var(--bg-color);
+  border-radius: 2px;
+  cursor: pointer;
+
+  .yld-time-picker-selection {
+    &:hover {
+      border-color: var(--primary-color);
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    height: 32px;
+    line-height: 30px;
+    border-top-width: 1.02px;
+    border-radius: 2px;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    user-select: none;
+
+    .yld-time-picker-selection-selected-value {
+      float: left;
+      width: 100%;
+      overflow: hidden;
+      color: var(--text-color);
+      font-size: var(--font-size);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      opacity: 1;
+    }
+
+    .yld-icon-xialadown {
+      position: absolute;
+      right: 10px;
+      color: #999;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      .yld-icon-close {
+        display: block;
+      }
+    }
+
+    .yld-icon-close {
+      position: absolute;
+      right: 28px;
+      display: none;
+      color: #999;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        color: #666;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.yld-time-picker-disabled {
+  background: var(--bg-color-2);
+  cursor: not-allowed;
+  opacity: 0.8;
+
+  .yld-time-picker-selection {
+    &:hover {
+      border-color: var(--border-color);
+    }
+  }
+}
+
+.yld-time-picker-dropdown {
+  background-color: var(--bg-color);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.6s;
+
+  .yld-time-picker-dropdown-value {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: var(--text-color);
+    font-size: var(--font-size);
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .yld-time-picker-dropdown-box {
+    display: flex;
+    user-select: none;
+
+    .yld-time-picker-dropdown-col {
+      width: 45px;
+      height: 180px;
+      padding-bottom: 150px;
+      overflow: auto;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &::-webkit-scrollbar {
+        /*滚动条整体样式*/
+        width: 0;
+        /*高宽分别对应横竖滚动条的尺寸*/
+        height: 0;
+      }
+
+      .yld-time-picker-dropdown-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        color: var(--text-color);
+        font-size: var(--font-size);
+        cursor: pointer;
+        transition: 0.3s;
+
+        .yld-icon-duihao {
+          display: none;
+          font-size: 14px;
+        }
+
+        &:hover {
+          background-color: var(--bg-color-2);
+
+          .yld-icon-duihao {
+            display: inline;
+          }
+        }
+      }
+
+      .yld-time-picker-dropdown-menu-disabled {
+        color: #aaa;
+        cursor: not-allowed;
+        opacity: 0.8;
+
+        &:hover {
+          background-color: var(--bg-color-2);
+        }
+      }
+
+      .yld-time-picker-dropdown-menu-selected {
+        color: var(--text-color);
+        font-weight: 600;
+        background-color: var(--bg-color-2);
+
+        .yld-icon-duihao {
+          display: inline;
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .yld-time-picker-dropdown-footer {
+    height: 32px;
+    padding: 0;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.yld-time-picker-allowClear {
+  &:hover {
+    .yld-input-suffix-wrapper .yld-icon-close {
+      right: 6px;
+    }
+    .yld-icon-calendar-clock {
+      display: none;
+    }
+  }
+}

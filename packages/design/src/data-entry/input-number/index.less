@@ -1,0 +1,79 @@
+.yld-input-number-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  color: var(--text-color);
+  font-size: var(--font-size);
+  user-select: none;
+  border: 0;
+  .yld-input-number,
+  .yld-input-number-disabled {
+    width: 100%;
+    height: 32px;
+    padding: 4px 8px;
+    color: inherit;
+    font-size: inherit;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-color: var(--bg-color-2);
+    outline: none;
+    transition: 0.4s;
+  }
+  .yld-input-number:hover {
+    background-color: var(--bg-color-3);
+    transition: 0.4s;
+  }
+  .yld-input-number:focus {
+    border-color: var(--primary-color);
+    background-color: var(--bg-color);
+    transition: 0.4s;
+  }
+  .yld-input-number-disabled {
+    background: var(--bg-color-3);
+    opacity: .5;
+    cursor: not-allowed;
+  }
+  .yld-input-number-suffix {
+    position: absolute;
+    right: 1px;
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    height: calc(100% - 2px);
+    opacity: 0;
+    transition: 0.3s;
+    .suffix-top,
+    .suffix-bottom {
+      box-sizing: border-box;
+      height: 50%;
+      text-align: center;
+      background: var(--bg-color-2);
+      border-bottom: 1px solid var(--border-color);
+      border-left: 1px solid var(--border-color);
+      border-top-right-radius: 2px;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--bg-color-2);
+      }
+    }
+    .suffix-bottom {
+      border-bottom: 0;
+      border-bottom-right-radius: 2px;
+    }
+  }
+  &:hover {
+    .yld-input-number-suffix {
+      opacity: 1;
+      transition: 0.3s;
+    }
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}

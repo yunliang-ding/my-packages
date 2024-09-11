@@ -1,0 +1,45 @@
+{
+  "type": "InputNumber",
+  "label": "数字输入框",
+  "props": {
+    "placeholder": "请输入",
+    "allowClear": true,
+    "disabled": false
+  },
+  "propsConfig": [
+    {
+      "type": "Switch",
+      "name": "disabled",
+      "label": "是否禁用"
+    },
+    {
+      "type": "Switch",
+      "name": "allowClear",
+      "label": "是否允许清除"
+    },
+    {
+      "type": "Input",
+      "name": "placeholder",
+      "label": "提示文案"
+    },
+    {
+      "type": "InputNumber",
+      "name": "min",
+      "label": "最小值"
+    },
+    {
+      "type": "InputNumber",
+      "name": "max",
+      "label": "最大值"
+    },
+    {
+      "type": "CodeEditor",
+      "name": "onChange",
+      "label": "设置onChange",
+      "props": {
+        "mode": "function",
+        "useEncrypt": true
+      }
+    }
+  ]
+}

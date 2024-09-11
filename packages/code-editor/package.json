@@ -1,0 +1,44 @@
+{
+  "name": "@yl-d/code-editor",
+  "description": "代码编辑器组件",
+  "author": "yunliang-ding",
+  "version": "1.0.7",
+  "homepage": "https://packages.yunliang.cloud/#/code-editor",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "monaco",
+    "code-editor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunliang-ding/packages"
+  },
+  "dependencies": {
+    "lodash.debounce": "4.0.8",
+    "lodash.clonedeep": "4.5.0",
+    "@monaco-editor/loader": "^1.4.0",
+    "monaco-textmate": "3.0.1",
+    "monaco-editor-textmate": "4.0.0",
+    "onigasm": "2.2.5"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "@yl-d/design": ">=0.0.4"
+  },
+  "devDependencies": {
+    "@yl-d/docs": "1.0.15",
+    "path-browserify": "1.0.1"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}

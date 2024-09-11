@@ -1,0 +1,41 @@
+{
+  "name": "@yl-d/design",
+  "description": "基于数据模型快速搭建表单",
+  "author": "yunliang-ding",
+  "version": "0.0.8",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "React",
+    "组件库"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunliang-ding/packages"
+  },
+  "dependencies": {
+    "dayjs": "1.8.33",
+    "async-validator": "4.2.5",
+    "bignumber.js": "9.1.0",
+    "lodash.clonedeep": "4.5.0",
+    "lodash.clonedeepwith": "4.5.0"
+  },
+  "devDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "@yl-d/icon": ">=0.0.2"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}

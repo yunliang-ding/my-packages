@@ -1,0 +1,46 @@
+{
+  "type": "CheckGroup",
+  "label": "多选组",
+  "props": {
+    "disabled": false,
+    "options": [
+      {
+        "label": "选项1",
+        "value": 1
+      },
+      {
+        "label": "选项2",
+        "value": 2
+      },
+      {
+        "label": "选项3",
+        "value": 3
+      }
+    ]
+  },
+  "propsConfig": [
+    {
+      "type": "Switch",
+      "name": "disabled",
+      "label": "是否禁用"
+    },
+    {
+      "type": "CodeEditor",
+      "label": "设置数据源",
+      "name": "options",
+      "tooltip": "仅支持json",
+      "props": {
+        "mode": "json"
+      }
+    },
+    {
+      "type": "CodeEditor",
+      "name": "onChange",
+      "label": "设置onChange",
+      "props": {
+        "mode": "function",
+        "useEncrypt": true
+      }
+    }
+  ]
+}

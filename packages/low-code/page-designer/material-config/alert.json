@@ -1,0 +1,62 @@
+{
+  "type": "Alert",
+  "label": "提示框",
+  "props": {
+    "type": "success",
+    "closable": true,
+    "message": "标题",
+    "description": "提示内容"
+  },
+  "propsConfig": [
+    {
+      "type": "RadioGroup",
+      "name": "widget",
+      "label": "类型",
+      "props": {
+        "options": [
+          {
+            "label": "成功",
+            "value": "success"
+          },
+          {
+            "label": "提示",
+            "value": "info"
+          },
+          {
+            "label": "警告",
+            "value": "warning"
+          },
+          {
+            "label": "错误",
+            "value": "error"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Switch",
+      "valuePropName": "checked",
+      "name": "closable",
+      "label": "支持关闭"
+    },
+    {
+      "type": "Input",
+      "name": "message",
+      "label": "标题"
+    },
+    {
+      "type": "Input",
+      "name": "description",
+      "label": "描述"
+    },
+    {
+      "type": "CodeEditor",
+      "name": "onClose",
+      "label": "设置onClose",
+      "props": {
+        "mode": "function",
+        "useEncrypt": true
+      }
+    }
+  ]
+}

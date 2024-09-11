@@ -1,0 +1,151 @@
+.yld-date-picker {
+  position: relative;
+}
+
+.yld-date-picker-body {
+  width: 265px;
+  height: 300px;
+  color: var(--text-color);
+  background: var(--bg-color);
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px var(--box-shadow),
+    0 9px 28px 8px var(--box-shadow);
+  user-select: none;
+  .yld-date-picker-body-value {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 10px;
+    font-size: var(--font-size);
+  }
+  .yld-date-picker-body-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0 10px;
+    border-bottom: 1px solid var(--border-color);
+    .picker-tools-before,
+    .picker-tools-next,
+    .picker-tools-date {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 100%;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .yld-icon {
+      opacity: 0.7;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+        transition: 0.3s;
+      }
+    }
+    .picker-tools-before {
+      .yld-icon-next {
+        transform: rotate(180deg);
+      }
+    }
+    .picker-tools-before-month {
+      justify-content: flex-start;
+      width: 20px;
+    }
+    .picker-tools-next-month {
+      justify-content: flex-end;
+      width: 20px;
+    }
+    .picker-tools-before:hover,
+    .picker-tools-next:hover {
+      color: var(--primary-color);
+    }
+    .picker-tools-date {
+      width: 240px;
+      font-size: var(--font-size);
+      .yld-select-selection {
+        width: 100px;
+      }
+    }
+  }
+  .yld-date-picker-body-header {
+    display: flex;
+    height: 40px;
+    .yld-picker-header-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14.28%;
+      height: 100%;
+      color: var(--text-color);
+      font-size: var(--font-size);
+      cursor: pointer;
+    }
+  }
+  .yld-date-picker-body-calendar {
+    .yld-picker-calendar-row {
+      display: flex;
+      height: 30px;
+      .yld-picker-calendar-row-col,
+      .yld-picker-calendar-row-col-active,
+      .yld-picker-calendar-row-col-current,
+      .yld-picker-calendar-row-col-current-month {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 14.28%;
+        height: 100%;
+        color: var(--text-color);
+        font-size: var(--font-size);
+        cursor: pointer;
+        opacity: 0.4;
+        .yld-picker-calendar-inner {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+        }
+      }
+      .yld-picker-calendar-row-col-active {
+        .yld-picker-calendar-inner {
+          color: #fff;
+          background: var(--primary-color);
+        }
+        opacity: 1;
+      }
+      .yld-picker-calendar-row-col:hover,
+      .yld-picker-calendar-row-col-current-month:hover {
+        color: var(--primary-color);
+      }
+      .yld-picker-calendar-row-col-current-month {
+        opacity: 1;
+      }
+      .yld-picker-calendar-row-col-current {
+        color: var(--primary-color);
+        opacity: 1;
+      }
+    }
+  }
+  .yld-date-picker-body-footer {
+    height: 40px;
+    padding: 0 10px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.yld-date-picker-allowClear {
+  &:hover {
+    .yld-input-suffix-wrapper .yld-icon-close {
+      right: 6px;
+    }
+    .yld-icon-calendar {
+      display: none;
+    }
+  }
+}

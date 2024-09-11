@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es2021",
+      "dom"
+    ],
+    "target": "es2016",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "declaration": true,
+    "jsx": "react-jsx",
+    "strict": false,
+    "sourceMap": false,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "lyr": [
+        "./src/.lyr"
+      ],
+      "react": [
+        "../../node_modules/@types/react"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

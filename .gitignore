@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+/npm-debug.log*
+/yarn-error.log
+/yarn.lock
+/runtime
+/packages/icon/src
+# production
+/dist
+/esm
+/docs-dist
+/www
+**/src/.theme
+**/src/.lyr
+# misc
+.DS_Store
+.env.local
+# ide
+/.vscode
+/.idea
+.gitpod.yml
+runtime
+.lyr
+www
+dist

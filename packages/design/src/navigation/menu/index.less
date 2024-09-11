@@ -1,0 +1,94 @@
+.yld-menu {
+  width: 100%;
+  transition: 0.2s;
+  background-color: var(--bg-color);
+  .yld-menu-subMenu {
+    width: 100%;
+    color: var(--text-color);
+    font-size: var(--font-size);
+    cursor: pointer;
+    .yld-menu-subMenu-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 40px;
+      border-right: 3px solid transparent;
+      transition: 0.2s;
+      .yld-icon {
+        margin-right: 2px;
+      }
+      span {
+        position: relative;
+        width: calc(100% - 20px);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      &:hover {
+        transition: 0.2s;
+        background-color: var(--bg-color-2);
+      }
+    }
+    .yld-menu-subMenu-hidden {
+      display: none;
+    }
+  }
+  .yld-menu-subMenu-active {
+    background-color: var(--box-shadow);
+    transition: 0.2s;
+    .yld-menu-subMenu-label {
+      border-color: var(--primary-color);
+      .yld-menu-subMenu-label-left {
+        span {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+  .yld-menu-subMenu-selected {
+    .yld-menu-subMenu-collapsed {
+      .yld-icon {
+        color: var(--primary-color);
+      }
+    }
+    .yld-menu-subMenu-parent {
+      .yld-menu-subMenu-label-left {
+        transition: 0.2s;
+        .yld-icon,
+        span {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+  .yld-menu-subMenu-disabled {
+    cursor: not-allowed !important;
+    opacity: 0.4;
+    transition: 0.2s;
+    .yld-menu-subMenu-label-left {
+      color: var(--text-color) !important;
+    }
+  }
+}
+.yld-menu-collapsed {
+  .yld-menu-subMenu .yld-menu-subMenu-label {
+    justify-content: center;
+    &:hover {
+      background-color: var(--bg-color-2);
+    }
+    .yld-icon {
+      margin-right: -2px;
+    }
+  }
+}
+// 单层导航
+.yld-menu-nav{
+  max-width: 208px;
+  .yld-menu-subMenu .yld-menu-subMenu-label span{
+    width: 100%;
+  }
+  .yld-menu-subMenu .yld-menu-subMenu-label{
+    padding: 0 20px;
+  }
+}

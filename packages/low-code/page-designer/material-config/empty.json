@@ -1,0 +1,21 @@
+{
+  "type": "Empty",
+  "label": "空提示",
+  "props": {
+    "description": "数据为空",
+    "simple": true
+  },
+  "propsConfig": [
+    {
+      "type": "Switch",
+      "valuePropName": "checked",
+      "name": "simple",
+      "label": "展示简单的logo"
+    },
+    {
+      "type": "Input",
+      "name": "description",
+      "label": "提示文案"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+.yld-card-form{
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  &-header {
+    padding: 0 16px;
+    height: 44px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+  }
+  &-body {
+    background-color: inherit;
+    padding: 16px;
+  }
+  &-footer {
+    height: 44px;
+    border-top: 1px solid var(--border-color);
+    background-color: inherit;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 16px;
+  }
+}
+.yld-card-form-start {
+  .yld-card-form-footer {
+    justify-content: flex-start;
+  }
+}
+.yld-card-form-center {
+  .yld-card-form-footer {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@yl-d/low-code",
+  "version": "1.0.4",
+  "description": "低码相关组件",
+  "author": "yunliang-ding",
+  "homepage": "https://packages.yunliang.cloud/#/low-code",
+  "keywords": [
+    "low-code"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "main": "dist/index.umd.js",
+  "module": "dist/index.umd.js",
+  "typings": "dist/index.d.ts",
+  "dependencies": {
+    "lodash.clonedeep": "4.5.0",
+    "lodash.debounce": "4.0.8"
+  },
+  "peerDependencies": {
+    "@yl-d/code-editor": ">=1.0.0",
+    "@yl-d/shared": ">=1.0.0",
+    "@yl-d/design": ">=0.0.7",
+    "@yl-d/icon": ">=0.0.4",
+    "axios": ">=0.21.1",
+    "html2canvas": "1.4.1",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  },
+  "license": "MIT"
+}

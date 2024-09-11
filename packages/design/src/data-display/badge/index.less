@@ -1,0 +1,28 @@
+.yld-badge-wrapper {
+  position: relative;
+  color: var(--text-color);
+  .yld-badge-count,
+  .yld-badge-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    min-width: 20px;
+    height: 20px;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 400;
+    font-size: var(--font-size);
+    line-height: 20px;
+    white-space: nowrap;
+    text-align: center;
+    background: var(--primary-color);
+    border-radius: 10px;
+    transform: translate(50%, -50%) scale(0.9);
+  }
+  .yld-badge-dot {
+    min-width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+}

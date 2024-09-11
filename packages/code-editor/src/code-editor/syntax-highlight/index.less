@@ -1,0 +1,42 @@
+.monaco-editor-syntax-highlight {
+  position: relative;
+  background-color: var(--vscode-editor-background);
+  border-radius: 8px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fc625d;
+    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  }
+  &-header {
+    display: flex;
+    padding-right: 6px;
+    height: 26px;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  &-body {
+    padding-bottom: 10px;
+  }
+  .monaco-editor {
+    .decorationsOverviewRuler,
+    .current-line,
+    .core-guide,
+    .monaco-editor-overlaymessage,
+    .cursor.monaco-mouse-cursor-text{
+      display: none !important;
+    }
+  }
+}
+.markdown-viewer-code-wrap-footer{
+  .monaco-editor-syntax-highlight{
+    border-radius: 0;
+  }
+}

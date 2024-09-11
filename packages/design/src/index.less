@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: system-ui;
+  div,
+  input,
+  span,
+  textarea,
+  label,
+  button {
+    box-sizing: border-box;
+  }
+  [class^='yld-']{
+    font-size: var(--font-size);
+    // font-weight: var(--text-weight);
+  }
+  .yld-icon{
+    font-size: 14px;
+  }
+  a {
+    font-weight: var(--text-weight);
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+}
+
+body {
+  line-height: 1.5;
+  --primary-color: #165dff;
+  --font-size: 12px;
+  --text-weight: 500;
+  --text-color: #4e5969;
+  --text-color-2: #1d2e29;
+  --bg-color: #fff;
+  --bg-color-2: #f2f3f5;
+  --bg-color-3: #e5e6eb;
+  --border-color: #e5e6ec;
+  --box-shadow: #00152914;
+  --ms-track-background: rgba(248, 248, 248, 0.76);
+  --ms-track-border-color: #dfdfdf;
+  --ms-thumb-color: rgba(0, 0, 0, 0.5);
+  /* 自定义整个滚动条 */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  /* 自定义滚动条轨道 */
+  ::-webkit-scrollbar-track {
+    background: var(--bg-color); /* 轨道颜色 */
+  }
+  /* 自定义滚动条的滑块（thumb） */
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-color-3); /* 滑块颜色 */
+    border-radius: 7px;
+  }
+  /* 当hover或active状态时，自定义滑块的颜色 */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--border-color);
+  }
+}
+
+body[yld-theme='dark'] {
+  --primary-color: #165dff;
+  --font-size: 12px;
+  --text-weight: 480;
+  --text-color: #ccc;
+  --text-color-2: #fff;
+  --bg-color: #232324;
+  --bg-color-2: #343435;
+  --bg-color-3: #ffffff1f;
+  --border-color: rgba(255, 255, 255, 0.12);
+  --box-shadow: #17171a;
+  --ms-track-background: rgba(210, 210, 210, 0.14);
+  --ms-track-border-color: rgba(228, 228, 228, 0.32);
+  --ms-thumb-color: rgba(121, 121, 121);
+}

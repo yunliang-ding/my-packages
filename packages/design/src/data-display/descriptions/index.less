@@ -1,0 +1,40 @@
+.yld-desc {
+  width: 100%;
+  &-title {
+    font-weight: 500;
+    color: var(--text-color-2);
+    margin-bottom: 10px;
+  }
+  &-item {
+    display: flex;
+    gap: 6px;
+    overflow: hidden;
+    &-label::after {
+      content: ':';
+    }
+    &-value{
+      color: var(--text-color-2);
+      text-overflow: ellipsis;
+      width: 100%;
+      overflow: hidden;
+      display: inline-block;
+    }
+  }
+}
+
+.yld-desc-grid{
+  display: grid;
+  gap: 10px;
+}
+
+.yld-desc-grid-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.yld-desc-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.yld-desc-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}

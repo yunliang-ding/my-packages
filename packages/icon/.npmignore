@@ -1,0 +1,6 @@
+#npmignore
+build.js
+svg
+tsconfig.json
+rollup.config.mjs
+src

@@ -1,0 +1,34 @@
+.dragContainer {
+  position: relative;
+  border: 2px dashed var(--border-color);
+  padding: 10px;
+}
+.dragContainer:not(:has(:hover)):hover {
+  border-color: var(--primary-color);
+}
+.dragContainerSelected {
+  border-color: var(--primary-color) !important;
+}
+.dragContainerDargKey {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  font-size: 12px;
+}
+.dragContainerSelected .dragContainerDargKey{
+  color: var(--primary-color);
+}
+.dragContainerTools {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  border-top-left-radius: 8px;
+}

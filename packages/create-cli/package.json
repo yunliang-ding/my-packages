@@ -1,0 +1,26 @@
+{
+  "private": false,
+  "name": "@yl-d/create-cli",
+  "version": "0.0.28",
+  "author": "yunliang-ding",
+  "main": "./index.js",
+  "description": "快速安装项目",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunliang-ding/packages"
+  },
+  "bin": {
+    "@yl-d/create-cli": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^5.0.0",
+    "inquirer": "^7.1.0",
+    "fs-extra": "11.2.0"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}

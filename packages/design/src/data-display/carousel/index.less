@@ -1,0 +1,82 @@
+.yld-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--text-color);
+  white-space: nowrap;
+  border: 1px solid var(--border-color);
+  .yld-carousel-page {
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+  }
+  .yld-carousel-before,
+  .yld-carousel-next {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 10px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    font-weight: 700;
+    background: #ffffff4d;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      background: #ffffff80;
+    }
+    .yld-icon {
+      cursor: pointer;
+    }
+  }
+  .yld-carousel-next {
+    right: 10px;
+    left: auto;
+  }
+  .yld-carousel-legend {
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    opacity: 0.8;
+    .yld-carousel-legend-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 18px;
+      padding: 0 4px;
+      background: var(--bg-color);
+      border-radius: 20px;
+      .yld-carousel-legend-box-item,
+      .yld-carousel-legend-box-item-active {
+        width: 10px;
+        height: 10px;
+        margin: 4px;
+        background: var(--bg-color-3);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          background: var(--text-color);
+        }
+      }
+      .yld-carousel-legend-box-item-active {
+        width: 20px;
+        background: var(--text-color);
+      }
+    }
+  }
+}

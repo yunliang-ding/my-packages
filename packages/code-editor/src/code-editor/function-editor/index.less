@@ -1,0 +1,34 @@
+.function-data-box,
+.function-data-box-full {
+  height: fit-content;
+  min-height: 160px;
+  min-width: 360px;
+  position: relative;
+  .function-data-error-info {
+    overflow: auto;
+    height: 50px;
+    color: #fa5c5c;
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    z-index: 1;
+    bottom: 0;
+    padding: 10px;
+  }
+  .function-data-box-full-screen {
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    color: #ccc;
+  }
+}
+.function-data-box-full {
+  height: 100vh !important;
+  width: 100% !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+}

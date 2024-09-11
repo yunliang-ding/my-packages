@@ -1,0 +1,47 @@
+{
+  "type": "RangeDatePicker",
+  "label": "日期区间",
+  "props": {
+    "allowClear": true,
+    "disabled": false,
+    "mode": "default"
+  },
+  "propsConfig": [
+    {
+      "type": "Switch",
+      "name": "disabled",
+      "label": "是否禁用"
+    },
+    {
+      "type": "RadioGroup",
+      "name": "mode",
+      "label": "模式",
+      "props": {
+        "options": [
+          {
+            "label": "默认",
+            "value": "default"
+          },
+          {
+            "label": "分割",
+            "value": "split"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "allowClear",
+      "label": "是否允许清除"
+    },
+    {
+      "type": "CodeEditor",
+      "name": "onChange",
+      "label": "设置onChange",
+      "props": {
+        "mode": "function",
+        "useEncrypt": true
+      }
+    }
+  ]
+}

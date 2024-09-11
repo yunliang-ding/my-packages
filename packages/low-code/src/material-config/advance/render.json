@@ -1,0 +1,17 @@
+{
+  "type": "Render",
+  "label": "自定义渲染",
+  "props": {},
+  "propsConfig": [
+    {
+      "type": "CodeEditor",
+      "label": "渲染函数",
+      "name": "render",
+      "props": {
+        "mode": "function",
+        "defaultCode": "({ value, onChange, form }) => {\n  return <button>我是自定义渲染</button>;\n}",
+        "useEncrypt": true
+      }
+    }
+  ]
+}

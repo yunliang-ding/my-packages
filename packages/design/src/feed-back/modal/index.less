@@ -1,0 +1,122 @@
+.yld-modal {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  z-index: 999;
+  width: 600px;
+  height: 400px;
+  background: var(--bg-color);
+  box-shadow: 0 10px 20px 0px var(--box-shadow);
+  transform: translate(-50%, 0%);
+  animation: modal-show 0.2s;
+  transition: 2s;
+  &-header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 16px;
+    color: var(--text-color);
+    font-size: 15px;
+    background-color: inherit;
+    border-bottom: 1px solid var(--border-color);
+    .yld-icon-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+      border-radius: 50%;
+      padding: 2px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        background-color: var(--box-shadow);
+        transition: 0.2s;
+      }
+    }
+  }
+  &-body {
+    position: relative;
+    z-index: 2;
+    height: calc(100% - 102px);
+    overflow: auto;
+    padding: 16px;
+    color: var(--text-color);
+    background-color: inherit;
+  }
+  &-footer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+    background-color: inherit;
+    border-top: 1px solid var(--border-color);
+    gap: 16px;
+    padding: 0 16px;
+  }
+}
+.yld-modal-mask,
+.yld-modal-mask-none {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 5, 5, 0.432);
+}
+.yld-modal-mask {
+  animation: modal-show-mask 0.2s;
+}
+.yld-modal-mask-none {
+  background: transparent;
+}
+@keyframes modal-show {
+  0% {
+    transform: translate(-50%, -200%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+@keyframes modal-show-mask {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: rgba(5, 5, 5, 0.432);
+  }
+}
+
+.yld-confirm {
+  width: 464px;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  z-index: 930230;
+  background: var(--bg-color);
+  box-shadow: 0 10px 20px 0px var(--box-shadow);
+  transform: translate(-50%, 0%);
+  animation: modal-show 0.2s;
+  transition: 2s;
+  border-radius: 4px;
+  &-title {
+    display: flex;
+    align-items: center;
+    b{
+      font-size: 14px;
+    }
+  }
+  &-footer {
+    margin-top: 20px;
+  }
+}

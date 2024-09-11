@@ -1,0 +1,115 @@
+.yld-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 15px;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: var(--font-size);
+  white-space: nowrap;
+  text-align: center;
+  background-color: var(--bg-color-2);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--bg-color-3);
+  }
+}
+.yld-btn-primary {
+  color: #fff;
+  background-color: var(--primary-color);
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: var(--primary-color);
+    opacity: 0.9;
+  }
+  .yld-icon-loading {
+    color: #fff;
+  }
+}
+.yld-btn-dashed {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-color: var(--border-color);
+  border-style: dashed;
+  &:hover,
+  &:focus {
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    border-color: var(--primary-color);
+  }
+}
+.yld-btn-danger {
+  color: #fff;
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: #ff7875;
+    border-color: #ff7875;
+  }
+  .yld-icon-loading {
+    color: #fff;
+  }
+}
+.yld-btn-link {
+  color: var(--primary-color);
+  background-color: transparent;
+  box-shadow: none;
+  &:hover,
+  &:focus {
+    background-color: var(--bg-color-2);
+  }
+}
+
+.yld-btn-disabled {
+  color: var(--text-color);
+  background-color: var(--bg-color-2);
+  opacity: 0.6;
+  cursor: not-allowed;
+  &:hover,
+  &:focus {
+    color: var(--text-color);
+    background-color: var(--bg-color-2);
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+.yld-btn-loading {
+  opacity: 0.5;
+  pointer-events: none;
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.yld-btn-ghost {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: var(--bg-color);
+  opacity: 1;
+  &:hover,
+  &:focus {
+    border-color: var(--primary-color);
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    opacity: 0.8;
+  }
+}
+
+.yld-btn-circle {
+  border-radius: 50%;
+  background: var(--bg-color-2);
+  padding: 8px;
+}

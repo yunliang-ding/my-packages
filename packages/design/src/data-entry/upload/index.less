@@ -1,0 +1,121 @@
+.yld-upload {
+  position: relative;
+  &-list {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-name {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: calc(100% - 40px);
+        padding: 10px 12px;
+        background-color: var(--bg-color-2);
+        color: var(--primary-color);
+        label {
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        .status-icon {
+          color: #83c203;
+          position: absolute;
+          right: 10px;
+        }
+      }
+      &-extra {
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &-item-error {
+      .yld-upload-files-item-name {
+        label {
+          color: red;
+        }
+      }
+    }
+  }
+  &-card {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    &-item {
+      position: relative;
+      height: 80px;
+      width: 80px;
+      &-mask {
+        display: none;
+        height: 80px;
+        width: 80px;
+        background-color: #080808a3;
+        top: 0;
+        position: absolute;
+        z-index: 1;
+      }
+      &-tools {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        .yld-icon {
+          color: var(--bg-color);
+          cursor: pointer;
+        }
+      }
+      &:hover {
+        .yld-upload-card-item-mask,
+        .yld-upload-card-item-tools {
+          display: block;
+        }
+      }
+    }
+    &-bar {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-color-2);
+    }
+  }
+}
+
+.yld-upload-card-preview{
+  .yld-modal{
+    box-shadow: none;
+    background-color: transparent;
+    top: 0;
+    width: max-content;
+    .yld-modal-header{
+      display: none;
+    }
+    .yld-modal-body{
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh !important;
+      .yld-icon-close{
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        background: #333;
+        padding: 10px;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

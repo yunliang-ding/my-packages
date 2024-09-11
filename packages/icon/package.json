@@ -1,0 +1,23 @@
+{
+  "version": "0.0.4",
+  "name": "@yl-d/icon",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "React",
+    "Icon"
+  ],
+  "scripts": {
+    "build": "node build.js && rollup -c"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}

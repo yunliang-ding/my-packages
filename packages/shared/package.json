@@ -1,0 +1,39 @@
+{
+  "name": "@yl-d/shared",
+  "description": "工具函数库",
+  "author": "yunliang-ding",
+  "version": "1.0.2",
+  "homepage": "https://packages.yunliang.cloud/#/shared",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "@yl-d/shared"
+  ],
+  "allowPackages": {
+    "urllib": {
+      "version": "*"
+    }
+  },
+  "dependencies": {
+    "@yl-d/icon": ">=0.0.2",
+    "@yl-d/design": ">=0.0.3",
+    "react-to-print": "2.13.0",
+    "remark-gfm": "3.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "@yl-d/design": ">=0.0.3",
+    "@yl-d/icon": ">=0.0.2"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}

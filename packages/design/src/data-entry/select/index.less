@@ -1,0 +1,197 @@
+.yld-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 120px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: var(--bg-color-2);
+  .yld-select-selection-multiple {
+    min-height: 32px;
+    padding-bottom: 3px;
+    cursor: text;
+    zoom: 1;
+    background-color: inherit;
+    transition: all 0.3s;
+    &:hover {
+      background-color: var(--bg-color-3);
+      transition: all 0.3s;
+    }
+  }
+  .yld-select-selection {
+    background-color: inherit;
+    transition: all 0.3s;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0 10px;
+    line-height: 30px;
+    border: 1px solid transparent;
+    background-color: inherit;
+    border-top-width: 1.02px;
+    border-radius: 2px;
+    outline: none;
+    user-select: none;
+    &:hover {
+      background-color: var(--bg-color-3);
+      transition: all 0.3s;
+    }
+    .yld-select-selection-selected-value {
+      height: 100%;
+      float: left;
+      width: 100%;
+      padding-right: 30px;
+      overflow: hidden;
+      color: var(--text-color);
+      font-size: var(--font-size);
+      background-color: inherit;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      opacity: 1;
+      .yld-select-selection-selected-input {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+        color: inherit;
+        background-color: inherit;
+        font-size: inherit;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+      }
+      .yld-select-selection-choice-warpper {
+        padding-top: 3px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .yld-select-selection-choice {
+        position: relative;
+        float: left;
+        max-width: 99%;
+        height: 24px;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        padding: 0 20px 0 10px;
+        overflow: hidden;
+        color: var(--text-color);
+        line-height: 22px;
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+        border-radius: 2px;
+        cursor: default;
+        transition: padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        user-select: none;
+        .yld-icon-close {
+          position: absolute;
+          right: 4px;
+          top: 5px;
+          color: #999;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            color: #666;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+    .yld-icon-down, .yld-icon-loading{
+      position: absolute;
+      right: 9px;
+      top: 9px;
+      font-size: 12px;
+      color: var(--text-color);
+      transition: 0.3s;
+    }
+    .yld-icon-close-el {
+      position: absolute;
+      right: 6px;
+      top: 7px;
+      display: none;
+      cursor: pointer;
+      color: var(--text-color);
+      padding: 2px;
+      border-radius: 50%;
+      transition: 0.3s;
+      &:hover {
+        transition: 0.3s;
+        background-color: var(--bg-color-2);
+      }
+    }
+    &:hover {
+      .yld-icon-close-el {
+        display: block;
+      }
+    }
+  }
+}
+.yld-select-disabled {
+  background: var(--bg-color-3);
+  opacity: .5;
+  cursor: not-allowed;
+  .yld-select-selection-selected-input {
+    background: ar(--bg-color-3);
+  }
+}
+.yld-select-open {
+  .yld-icon-down {
+    transform: rotate(180deg);
+    transition: 0.3s;
+  }
+  .yld-select-selection {
+    background-color: var(--bg-color);
+    border-color: var(--primary-color);
+    &:hover {
+      background-color: var(--bg-color);
+    }
+  }
+}
+.yld-select-dropdown-menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  color: var(--text-color);
+  font-size: var(--font-size);
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: 0.3s;
+  .yld-icon-check {
+    display: none;
+    font-size: 14px;
+  }
+  &:hover {
+    background-color: var(--box-shadow);
+    .yld-icon-check {
+      display: inline;
+    }
+  }
+}
+.yld-select-dropdown-menu-disabled {
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.8;
+  &:hover {
+    background-color: var(--bg-color);
+  }
+}
+.yld-select-dropdown-menu-selected {
+  color: var(--primary-color);
+  font-weight: 600;
+  background-color: var(--bg-color-2);
+  .yld-icon-check {
+    display: inline;
+    color: var(--primary-color);
+  }
+}
+.yld-select-allowClear {
+  &:hover {
+    .yld-icon-down {
+      display: none;
+    }
+  }
+}

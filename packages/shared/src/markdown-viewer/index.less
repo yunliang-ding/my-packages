@@ -1,0 +1,84 @@
+.markdown-viewer-code-area {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+.markdown-viewer-code-wrap {
+  border: 1px solid var(--border-color) !important;
+  height: 100%;
+}
+.markdown-viewer-code-wrap-body {
+  padding: 12px;
+  height: fit-content;
+  overflow: auto;
+}
+.markdown-viewer-code-wrap-extra {
+  height: 36px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 12px;
+  gap: 10px;
+}
+.markdown-viewer-code-wrap-footer {
+  border-top: 1px dashed var(--border-color);
+  height: fit-content;
+  position: relative;
+  .yld-tabs{
+    .yld-tabs-content{
+      padding-top: 0;
+      padding-bottom: 0;
+      .yld-tabs-content-item{
+        padding: 0;
+      }
+    }
+  }
+}
+.markdown-viewer-ul {
+  list-style-type: disc;
+  padding-left: 15px;
+}
+.markdown-viewer-ol {
+  list-style-type: disc;
+  padding-left: 15px;
+}
+.markdown-viewer-li {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.markdown-viewer-h3 {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 10px;
+}
+.markdown-viewer-strong {
+  padding: 1px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 13px;
+}
+.markdown-viewer-blockquote {
+  padding: 6px 10px;
+  color: #555;
+  border-left: 4px solid var(--primary-color);;
+  background: #fff9f9;
+  font-size: 1rem;
+}
+.markdown-viewer-blockquote p {
+  margin: 0;
+}
+.markdown-viewer-table {
+  width: 100%;
+  border: 1px solid var(--border-color);
+}
+.markdown-viewer-table thead {
+  background-color: var(--bg-color-2);
+  height: 30px;
+}
+.markdown-viewer-table th,
+.markdown-viewer-table td {
+  text-align: left;
+  padding-left: 10px;
+  border: 1px solid var(--border-color);
+  height: 32px;
+}

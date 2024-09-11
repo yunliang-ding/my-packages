@@ -1,0 +1,103 @@
+.yld-tabs {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  user-select: none;
+  .yld-tabs-header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background: var(--bg-color);
+    overflow: hidden;
+    .yld-tabs-header-border {
+      position: absolute;
+      overflow: hidden;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--border-color);
+    }
+    .yld-tabs-item-active-border {
+      position: absolute;
+      bottom: 0px;
+      height: 3px;
+      background-color: var(--primary-color);
+      transition: 0.3s ease-in;
+    }
+    .yld-tabs-header-item,
+    .yld-tabs-header-item-active {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 8px;
+      color: var(--text-color);
+      font-size: var(--font-size);
+      white-space: nowrap;
+      background: inherit;
+      cursor: pointer;
+      .yld-tabs-header-item-label {
+        display: flex;
+        padding: 4px 12px;
+        position: relative;
+      }
+      .yld-icon-close {
+        position: absolute;
+        border: 2px solid #fff;
+        top: -7px;
+        right: -7px;
+        display: none;
+        color: var(--text-color);
+        border-radius: 50%;
+        padding: 2px;
+        transition: 0.3s;
+        background-color: var(--bg-color-2);
+        &:hover {
+          transition: 0.3s;
+          background-color: var(--bg-color-3);
+        }
+      }
+      &:hover {
+        .yld-tabs-header-item-label {
+          background-color: var(--bg-color-2);
+        }
+        .yld-icon-close {
+          display: inline-block;
+        }
+      }
+    }
+    .yld-tabs-header-item-active {
+      color: var(--primary-color);
+      transition: 0.3s;
+      span {
+        color: var(--primary-color);
+      }
+    }
+  }
+  .yld-tabs-content {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 40px);
+    padding: 10px 0px;
+    overflow: hidden;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-size: var(--font-size);
+    &-item {
+      position: relative;
+      top: 0;
+      padding: 10px;
+      color: var(--text-color);
+      display: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transform: translate(0%);
+      transition: 0.3s ease-out;
+    }
+  }
+}

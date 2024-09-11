@@ -1,0 +1,61 @@
+.yld-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-start;
+  height: 30px;
+  color: var(--text-color);
+  font-size: var(--font-size);
+  transition: all 0.4s;
+  user-select: none;
+  .yld-pagination-total {
+    margin-left: 16px;
+    font-size: var(--font-size);
+    white-space: nowrap;
+  }
+  .yld-pagination-pre,
+  .yld-pagination-next,
+  .yld-pagination-item,
+  .yld-pagination-pre-disabled,
+  .yld-pagination-next-disabled,
+  .yld-pagination-item-active {
+    padding: 4px 10px;
+    background: var(--bg-color);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .yld-pagination-pre-disabled,
+  .yui-pagination-next-disabled {
+    opacity: 0.5;
+  }
+  .yld-pagination-item-active {
+    color: var(--primary-color);
+    background: var(--bg-color-2);
+    transition: 0.3s;
+  }
+  .yld-pagination-pre-disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  .yld-pagination-next-disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  .yld-pagination-pre:hover,
+  .yld-pagination-next:hover,
+  .yld-pagination-item:hover {
+    background: var(--bg-color-2);
+    opacity: 0.6;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .yld-pagination-jump {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    white-space: nowrap;
+    .yld-input-number {
+      margin: 0 10px;
+    }
+  }
+}

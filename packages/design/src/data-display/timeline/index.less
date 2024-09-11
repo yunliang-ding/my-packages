@@ -1,0 +1,29 @@
+.yld-timeline {
+  &-item {
+    display: flex;
+    position: relative;
+    height: fit-content;
+    min-height: 40px;
+    &-dot {
+      height: 20px;
+      width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-line {
+      position: absolute;
+      width: 1.5px;
+      height: calc(100% - 20px);
+      left: 9px;
+      top: 20px;
+      background-color: var(--border-color);
+    }
+    &-title {
+      font-size: var(--font-size);
+      padding: 2px 0;
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+  }
+}

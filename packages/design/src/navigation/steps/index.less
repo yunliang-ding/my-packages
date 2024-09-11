@@ -1,0 +1,109 @@
+.yld-steps {
+  display: flex;
+  &-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-item {
+    flex: 1;
+    white-space: nowrap;
+    margin-right: 12px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    &-icon {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 12px;
+      font-size: 16px;
+      &-number {
+        border: 1px solid transparent;
+        color: var(--text-color);
+        width: 28px;
+        line-height: 26px;
+        height: 28px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: var(--bg-color-3);
+      }
+    }
+    &-content {
+      display: inline-block;
+    }
+    &-title {
+      white-space: nowrap;
+      position: relative;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 28px;
+      padding-right: 12px;
+    }
+  }
+  .yld-steps-item-active {
+    .yld-steps-item-icon {
+      color: var(--primary-color);
+    }
+    .yld-steps-item-icon-number {
+      color: #fff;
+      background-color: var(--primary-color);
+    }
+  }
+  .yld-steps-item-finish {
+    .yld-steps-icon {
+      background-color: #e8f3ff;
+    }
+  }
+  .yld-steps-item-active {
+    .yld-steps-icon {
+      color: #fff;
+      background-color: var(--primary-color);
+    }
+  }
+  .yld-steps-item-wait {
+    .yld-steps-icon {
+      background-color: var(--bg-color-2);
+    }
+  }
+  .yld-steps-item:not(:last-child) .yld-steps-item-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5000px;
+    height: 1px;
+    left: 100%;
+    top: 13.5px;
+    background-color: var(--border-color);
+    box-sizing: border-box;
+  }
+}
+
+.yld-steps-vertical {
+  flex-direction: column;
+  .yld-steps-item:not(:last-child) {
+    min-height: 90px;
+  }
+  .yld-steps-item:not(:last-child) .yld-steps-item-title:after {
+    content: none;
+  }
+  .yld-steps-item:not(:last-child) > .yld-steps-item-tail:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--border-color);
+  }
+  .yld-steps-item:not(:last-child) > .yld-steps-item-tail {
+    position: absolute;
+    width: 1px;
+    top: 34px;
+    bottom: 6px;
+    left: 13.5px;
+    box-sizing: border-box;
+    padding: 0;
+    height: unset;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "type": "Breadcrumb",
+  "label": "面包屑",
+  "props": {
+    "items": [
+      {
+        "label": "首页",
+        "value": "home"
+      },
+      {
+        "label": "用户管理",
+        "value": "user"
+      },
+      {
+        "label": "用户详情",
+        "value": "view"
+      }
+    ],
+    "separator": "/"
+  },
+  "propsConfig": [
+    {
+      "type": "CodeEditor",
+      "label": "设置数据源",
+      "name": "items",
+      "tooltip": "仅支持json",
+      "props": {
+        "mode": "json"
+      }
+    },
+    {
+      "type": "Input",
+      "label": "分隔符",
+      "name": "separator"
+    },
+    {
+      "type": "CodeEditor",
+      "name": "onClick",
+      "label": "设置onClick",
+      "props": {
+        "mode": "function",
+        "useEncrypt": true
+      }
+    }
+  ]
+}
