@@ -7,7 +7,7 @@
   "description": "快速搭建 React 组件库文档",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yunliang-ding/packages"
+    "url": "https://github.com/yunliang-ding/my-packages"
   },
   "bin": {
     "lyr-docs": "./bin/index.js"

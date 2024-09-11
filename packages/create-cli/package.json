@@ -7,7 +7,7 @@
   "description": "快速安装项目",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yunliang-ding/packages"
+    "url": "https://github.com/yunliang-ding/my-packages"
   },
   "bin": {
     "@yl-d/create-cli": "./index.js"

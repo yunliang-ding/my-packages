@@ -6,7 +6,7 @@
   "description": "轻量级 React 全栈开发框架",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yunliang-ding/packages"
+    "url": "https://github.com/yunliang-ding/my-packages"
   },
   "bin": {
     "lyr": "./bin/index.js"

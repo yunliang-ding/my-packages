@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yunliang-ding/packages"
+    "url": "https://github.com/yunliang-ding/my-packages"
   },
   "dependencies": {
     "screenfull": "6.0.2",

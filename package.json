@@ -1,7 +1,7 @@
 {
   "private": true,
   "author": "yunliang-ding",
-  "name": "packages",
+  "name": "my-packages",
   "scripts": {
     "start": "lyr-docs dev",
     "docs:build": "lyr-docs build"
@@ -101,6 +101,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yunliang-ding/packages"
+    "url": "https://github.com/yunliang-ding/my-packages"
   }
 }

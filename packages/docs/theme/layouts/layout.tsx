@@ -146,7 +146,7 @@ export default () => {
           <a
             style={{ marginLeft: 8 }}
             target="_blank"
-            href="https://github.com/yunliang-ding/packages/tree/main/packages/docs"
+            href="https://github.com/yunliang-ding/my-packages/tree/main/packages/docs"
           >
             @yl-d/docs
             <IconLaunch
