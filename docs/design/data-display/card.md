@@ -46,6 +46,30 @@ export default () => {
 };
 ```
 
+## 展开收起
+
+```jsx | react | var(--bg-color-2)
+import { Space, Card } from '@yl-d/design';
+
+export default () => {
+  return (
+    <Space direction="vertical" style={{ width: '100%' }}>
+      <Card title="数据展示" expandable>
+        这里是数据展示
+      </Card>
+
+      <Card title="数据录入" expandable>
+        这里是数据录入
+      </Card>
+
+      <Card title="用户反馈" expandable>
+        这里是用户反馈
+      </Card>
+    </Space>
+  );
+};
+```
+
 ## API
 
 ```API

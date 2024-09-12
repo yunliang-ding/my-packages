@@ -17,6 +17,8 @@ export interface CardProps{
   hoverable?: boolean;
   /** 是否有边框 */
   bordered?: boolean;
+  /** 是否支持展开收起 */
+  expandable?: boolean;
   children: ReactNode;
 }
 
