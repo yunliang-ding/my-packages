@@ -1,6 +1,6 @@
 ## 2024-0909 ~ 2024-0914
 
-- 新增组件 `MacScrollbar`
+- 新增组件 `MacScrollbar`、`Card`、`Collapse`
 
 ## 2024-0902 ~ 2024-0907
 

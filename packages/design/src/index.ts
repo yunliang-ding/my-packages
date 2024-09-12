@@ -5,6 +5,8 @@ export { default as Button } from './general/button';
 export { type ButtonProps } from './general/button/type';
 export { default as MacScrollbar } from './general/mac-scrollbar';
 export { type ScrollbarProps } from './general/mac-scrollbar/type';
+export { default as Card } from './data-display/card';
+export { type CardProps } from './data-display/card/type';
 export { default as Carousel } from './data-display/carousel';
 export { type CarouselProps } from './data-display/carousel/type';
 export { default as Empty } from './data-display/empty';

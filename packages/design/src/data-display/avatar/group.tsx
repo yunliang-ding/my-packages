@@ -4,24 +4,25 @@ import { AvatarProps } from './type';
 import './index.less';
 
 export interface AvatarGroupProps {
+  size?: number;
   options: (AvatarProps & {
     label: ReactNode;
   })[];
 }
 
-export default ({ options = [] }: AvatarGroupProps) => {
+export default ({ size = 40, options = [] }: AvatarGroupProps) => {
   options.forEach((item, index) => {
     item.style = {
       ...item.style,
       zIndex: options.length - index,
-      left: index === 0 ? 0 : -8 * index
+      marginLeft: index > 0 ? -8 : 0,
     };
   });
   return (
     <div className="yld-avatar-group">
       {options.map((item, index) => {
         return (
-          <Avatar {...item} key={index}>
+          <Avatar size={size} {...item} key={index}>
             {item.label}
           </Avatar>
         );

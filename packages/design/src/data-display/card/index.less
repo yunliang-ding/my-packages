@@ -1,0 +1,52 @@
+.yld-card{
+  min-width: 300px;
+  width: 100%;
+  min-height: 200px;
+  height: 200px;
+  &-head{
+    border-bottom: 1px solid var(--border-color);
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    &-title{
+      font-weight: 500;
+    }
+    &-extra{
+      min-width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  &-body{
+    padding: 16px 10px;
+    height: calc(100% - 42px);
+  }
+  &-footer{
+    border-top: 1px solid var(--border-color);
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+  }
+}
+
+.yld-card-hasFooter{
+  .yld-card-body{
+    height: calc(100% - 84px);
+  }
+}
+
+.yld-card-bordered{
+  border: 1px solid var(--border-color);
+}
+.yld-card-hoverable{
+  transition: .3s;
+  &:hover{
+    box-shadow: 0px 2px 4px var(--box-shadow);
+    transition: .3s;
+  }
+}

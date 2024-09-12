@@ -173,12 +173,13 @@ fs.outputFile(
 }
 .yld-icon-__hover__{
   cursor: pointer;
-  padding: 6px;
-  border-radius: 10px;
+  padding: 4px;
+  border-radius: 50%;
   transition: 0.3s;
   &:hover{
     transition: 0.3s;
     background: var(--bg-color-3);
+    color: var(--primary-color);
   }
 }
 @keyframes spin {

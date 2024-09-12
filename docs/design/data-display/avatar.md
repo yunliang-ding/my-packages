@@ -42,7 +42,7 @@ export default () => {
 ## 头像组
 
 ```jsx | react
-import { Space, AvatarGroup } from '@yl-d/design';
+import { AvatarGroup } from '@yl-d/design';
 
 export default () => {
   return (
