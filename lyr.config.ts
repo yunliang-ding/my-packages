@@ -153,11 +153,6 @@ export default defineConfig({
               disabled: true,
             },
             {
-              label: '气泡卡片 Popover',
-              path: '/design/data-display/popover',
-              disabled: true,
-            },
-            {
               label: '间距 Space',
               path: '/design/data-display/space',
             },
