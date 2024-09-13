@@ -1,7 +1,6 @@
 {
   "name": "react-temp-docs",
   "description": "我的组件",
-  "author": "yunliang-ding",
   "version": "0.0.1",
   "scripts": {
     "start": "lyr-docs dev",
@@ -16,15 +15,11 @@
     "docs",
     "react-docs"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yunliang-ding/react-temp-docs"
-  },
   "peerDependencies": {
     "react": "17.0.2"
   },
   "devDependencies": {
-    "@yl-d/docs": "1.0.19"
+    "@yl-d/docs": "^1.0.24"
   },
   "license": "MIT",
   "publishConfig": {

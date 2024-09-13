@@ -1,3 +1,11 @@
-# 参看文档
+# 安装依赖
 
-[点击跳转文档](http://dev-ops.yunliang.cloud/website/lyr-docs)
+pnpm i
+
+## 开发环境
+
+1. npm start;
+
+## 部署
+
+1. npm run build; 构建前端资源

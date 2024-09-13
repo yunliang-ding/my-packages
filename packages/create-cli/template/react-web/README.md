@@ -1,6 +1,6 @@
 # 安装依赖
 
-yarn/pnpm
+pnpm i
 
 ## 开发环境
 
@@ -10,7 +10,7 @@ yarn/pnpm
 ## 部署
 
 1. npm run build; 构建前端资源
-2. ./deploy; 采用 pm2 部署 默认部署端口 8360;
+2. npm run deploy; 采用 pm2 部署 默认部署端口 8360;
 
 
 ## Demo

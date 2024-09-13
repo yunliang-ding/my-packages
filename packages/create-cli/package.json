@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@yl-d/create-cli",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "author": "yunliang-ding",
   "main": "./index.js",
   "description": "快速安装项目",
