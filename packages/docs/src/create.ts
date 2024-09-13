@@ -74,6 +74,7 @@ const createFileRouter = async function (
   const files = glob.sync(folder);
   const _require = {};
   const importArr = [
+    `// @ts-nocheck`,
     `import React from 'react';`,
     `import MarkdownViewer from '../.theme/markdown-viewer';`,
   ];
@@ -101,9 +102,9 @@ const createFileRouter = async function (
             .replaceAll('@', '')
             .replaceAll('/', '');
           importArr.push(
-            `import * as ${libName} from '${pkg
+            `const ${libName} = import('${pkg
               .replace('package.json', 'src/index.ts')
-              .replace(rootPath, '../..')}';`,
+              .replace(rootPath, '../..')}');`,
           );
           _require[name] = encodeStr(libName);
         });
@@ -158,10 +159,6 @@ const createFileRouter = async function (
         CompName.unshift('R');
       }
     }
-    // 添加依赖
-    importArr.push(
-      `import ${CompName.join('')} from '../../docs${originPath}.md';`,
-    );
     return {
       path,
       component: encodeStr(
@@ -169,7 +166,7 @@ const createFileRouter = async function (
           packageJson.repository?.url
         }/tree/main${file.replace(rootPath, '')}' updateTime='${
           fs.statSync(file).mtime
-        }' content={${CompName.join('')}} require={mdRequire} />`,
+        }' content={import('../../docs${originPath}.md')} require={mdRequire} />`,
       ),
     };
   });
