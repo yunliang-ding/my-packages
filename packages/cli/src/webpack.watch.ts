@@ -31,7 +31,7 @@ export default async (rootPath: string, config: ConfigProps) => {
   );
   // 创建ws
   const wss = new WebSocketServer({ host: config.wsHost, port: config.wsPort });
-  wss.on('connection');
+  wss.on('connection', () => {});
   /** 监听配置文件的改动 */
   const chokidarWatcher = chokidar.watch(`${rootPath}/lyr.config.ts`, {
     ignored: /node_modules/,
