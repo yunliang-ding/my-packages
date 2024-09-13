@@ -25,7 +25,7 @@ export default ({ github, updateTime, require = {}, ...rest }: any) => {
     }
   }, []);
   useEffect(() => {
-    rest.content.then((res: any) => {
+    rest.content().then((res: any) => {
       setContent(res.default);
     });
   }, [rest.content]);
