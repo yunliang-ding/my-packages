@@ -166,7 +166,7 @@ const createFileRouter = async function (
           packageJson.repository?.url
         }/tree/main${file.replace(rootPath, '')}' updateTime='${
           fs.statSync(file).mtime
-        }' content={import('../../docs${originPath}.md')} require={mdRequire} />`,
+        }' content={() => import('../../docs${originPath}.md')} require={mdRequire} />`,
       ),
     };
   });
