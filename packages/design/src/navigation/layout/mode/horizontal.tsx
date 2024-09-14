@@ -1,4 +1,4 @@
-import { Menu, Breadcrumb, Tabs, Space } from '../../..';
+import { Menu, Breadcrumb, Tabs, MacScrollbar } from '../../..';
 import RightContentRender from '../right-content-render';
 import './horizontal.less';
 
@@ -64,17 +64,19 @@ export default ({
         <div className="yld-layout-horizontal-body-sider">
           <div className="yld-layout-horizontal-body-sider-menu">
             {/* 这里渲染当前一级菜单下面的子菜单 */}
-            <Menu
-              selectKey={selectedKey}
-              openKey={openKeys}
-              collapsed={collapsed}
-              openMenu={openMenu}
-              menuClick={menuClick}
-              menus={
-                (menus?.find((item) => item?.path === topKey) as any)
-                  ?.children || []
-              }
-            />
+            <MacScrollbar style={{ height: "100%" }}>
+              <Menu
+                selectKey={selectedKey}
+                openKey={openKeys}
+                collapsed={collapsed}
+                openMenu={openMenu}
+                menuClick={menuClick}
+                menus={
+                  (menus?.find((item) => item?.path === topKey) as any)
+                    ?.children || []
+                }
+              />
+            </MacScrollbar>
           </div>
           <div className="yld-layout-horizontal-body-sider-footer">
             {siderFooterRender(collapsed)}
