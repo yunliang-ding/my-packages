@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@yl-d/docs",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "author": "yunliang-ding",
   "main": "./dist/index.js",
   "description": "快速搭建 React 组件库文档",
