@@ -64,7 +64,7 @@ export default ({
         <div className="yld-layout-horizontal-body-sider">
           <div className="yld-layout-horizontal-body-sider-menu">
             {/* 这里渲染当前一级菜单下面的子菜单 */}
-            <MacScrollbar style={{ height: "100%" }}>
+            {/* <MacScrollbar style={{ height: "100%" }}> */}
               <Menu
                 selectKey={selectedKey}
                 openKey={openKeys}
@@ -76,7 +76,7 @@ export default ({
                     ?.children || []
                 }
               />
-            </MacScrollbar>
+            {/* </MacScrollbar> */}
           </div>
           <div className="yld-layout-horizontal-body-sider-footer">
             {siderFooterRender(collapsed)}

@@ -412,8 +412,9 @@ export default defineConfig({
       path: '/hooks',
       children: [
         {
-          label: 'create',
-          path: '/hooks/create',
+          label: '介绍',
+          path: '/hooks',
+          group: true,
         },
         {
           label: 'useRefesh',

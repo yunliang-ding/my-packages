@@ -88,6 +88,7 @@ export default (config: ConfigProps) =>
     },
     optimization: {
       minimize: true,
+      chunkIds: 'named', // 开启更可读的chunkIds，主要是方便开发环境下的调试
       minimizer: [
         new TerserPlugin({
           extractComments: false,
