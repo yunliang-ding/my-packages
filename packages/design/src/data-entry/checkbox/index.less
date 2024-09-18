@@ -5,16 +5,16 @@
   font-size: var(--font-size);
   cursor: pointer;
   user-select: none;
+  &:hover {
+    .yld-checkbox .yld-checkbox-hover {
+      display: block;
+    }
+  }
   .yld-checkbox {
     width: 14px;
     height: 14px;
     .yld-checkbox-input {
       opacity: 0;
-    }
-    &:hover {
-      .yld-checkbox-hover {
-        display: block;
-      }
     }
     .yld-checkbox-inner {
       position: absolute;
@@ -79,10 +79,8 @@
   // disabled
   .yld-checkbox-disabled {
     cursor: not-allowed;
-    &:hover {
-      .yld-checkbox-hover {
-        display: none;
-      }
+    .yld-checkbox-hover {
+      visibility: hidden;
     }
     .yld-checkbox-inner {
       background-color: var(--bg-color-2);
