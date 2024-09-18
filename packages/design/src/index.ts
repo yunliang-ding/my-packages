@@ -3,8 +3,6 @@ export { default as Layer } from './common/layer';
 /** 通用展示 */
 export { default as Button } from './general/button';
 export { type ButtonProps } from './general/button/type';
-export { default as MacScrollbar } from './general/mac-scrollbar';
-export { type ScrollbarProps } from './general/mac-scrollbar/type';
 export { default as Card } from './data-display/card';
 export { type CardProps } from './data-display/card/type';
 export { default as Carousel } from './data-display/carousel';
@@ -30,8 +28,6 @@ export { default as Space } from './data-display/space';
 export { type SpaceProps } from './data-display/space/type';
 export { default as Avatar } from './data-display/avatar';
 export { type AvatarProps } from './data-display/avatar/type';
-export { default as SplitPane } from './data-display/split-pane';
-export { type SplitPaneProps } from './data-display/split-pane/type';
 /** 表单元素 */
 export { default as Input } from './data-entry/input';
 export { type InputProps } from './data-entry/input/type';
@@ -123,3 +119,7 @@ export { default as DragForm } from './drag/form';
 export { type DragFormProps } from './drag/form/type';
 /** 其他 */
 export { default as CopyToClipboard } from './other/copy-to-clipboard';
+export { default as SplitPane } from './other/split-pane';
+export { type SplitPaneProps } from './other/split-pane/type';
+export { default as MacScrollbar } from './other/mac-scrollbar';
+export { type ScrollbarProps } from './other/mac-scrollbar/type';
