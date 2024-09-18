@@ -112,10 +112,6 @@ export default defineConfig({
               label: '图标 Icon',
               path: '/design/general/icon',
             },
-            {
-              label: '滑动轴 MacScrollbar',
-              path: '/design/general/mac-scrollbar',
-            },
           ],
         },
         {
@@ -402,6 +398,14 @@ export default defineConfig({
             {
               label: '复制 CopyToClipboard',
               path: '/design/other/copy-to-clipboard',
+            },
+            {
+              label: '滑动轴 MacScrollbar',
+              path: '/design/other/mac-scrollbar',
+            },
+            {
+              label: '分隔面板 SplitPane',
+              path: '/design/other/split-pane',
             },
           ],
         },

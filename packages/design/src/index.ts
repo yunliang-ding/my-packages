@@ -30,7 +30,8 @@ export { default as Space } from './data-display/space';
 export { type SpaceProps } from './data-display/space/type';
 export { default as Avatar } from './data-display/avatar';
 export { type AvatarProps } from './data-display/avatar/type';
-export { default as AvatarGroup } from './data-display/avatar/group';
+export { default as SplitPane } from './data-display/split-pane';
+export { type SplitPaneProps } from './data-display/split-pane/type';
 /** 表单元素 */
 export { default as Input } from './data-entry/input';
 export { type InputProps } from './data-entry/input/type';

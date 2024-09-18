@@ -57,8 +57,8 @@ dependencies:
     specifier: ^0.0.8
     version: 0.0.8(@yl-d/icon@0.0.4)(react-dom@17.0.2)(react@17.0.2)
   '@yl-d/docs':
-    specifier: ^1.0.21
-    version: 1.0.21(monaco-editor@0.50.0)
+    specifier: ^1.0.25
+    version: 1.0.25(monaco-editor@0.50.0)
   '@yl-d/hooks':
     specifier: ^0.0.1
     version: 0.0.1(react@17.0.2)
@@ -191,6 +191,9 @@ dependencies:
   react-router-dom:
     specifier: 6.20.0
     version: 6.20.0(react-dom@17.0.2)(react@17.0.2)
+  react-split-pane:
+    specifier: 0.1.92
+    version: 0.1.92(react-dom@17.0.2)(react@17.0.2)
   react-to-print:
     specifier: 2.13.0
     version: 2.13.0(react-dom@17.0.2)(react@17.0.2)
@@ -1551,8 +1554,8 @@ packages:
       react-dom: 17.0.2(react@17.0.2)
     dev: false
 
-  /@yl-d/docs@1.0.21(monaco-editor@0.50.0):
-    resolution: {integrity: sha512-D/hXjldLoTQU0+grykQZw+i5a+m/4eOb/hNgm7y75OmiFA5unwam5wrrqE3M8+Bo3GlxxoMK5P7fvi6VPdzVog==}
+  /@yl-d/docs@1.0.25(monaco-editor@0.50.0):
+    resolution: {integrity: sha512-TTy2YX7jFLpIcaWwWFdpwSokFz4MKvaBxJ8qtjfy4zBXbIwHa5ePy32059zH+bKAk5Lqi10xKfHkcyEwJ3eIOA==}
     hasBin: true
     dependencies:
       '@babel/core': 7.23.5
@@ -5473,6 +5476,10 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
+  /react-lifecycles-compat@3.0.4:
+    resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
+    dev: false
+
   /react-resizable@3.0.4(react-dom@17.0.2)(react@17.0.2):
     resolution: {integrity: sha512-StnwmiESiamNzdRHbSSvA65b0ZQJ7eVQpPusrSmcpyGKzC0gojhtO62xxH6YOBmepk9dQTBi9yxidL3W4s3EBA==}
     peerDependencies:
@@ -5529,6 +5536,25 @@ packages:
     dependencies:
       '@remix-run/router': 1.19.0
       react: 17.0.2
+    dev: false
+
+  /react-split-pane@0.1.92(react-dom@17.0.2)(react@17.0.2):
+    resolution: {integrity: sha512-GfXP1xSzLMcLJI5BM36Vh7GgZBpy+U/X0no+VM3fxayv+p1Jly5HpMofZJraeaMl73b3hvlr+N9zJKvLB/uz9w==}
+    peerDependencies:
+      react: ^16.0.0-0
+      react-dom: ^16.0.0-0
+    dependencies:
+      prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+      react-lifecycles-compat: 3.0.4
+      react-style-proptype: 3.2.2
+    dev: false
+
+  /react-style-proptype@3.2.2:
+    resolution: {integrity: sha512-ywYLSjNkxKHiZOqNlso9PZByNEY+FTyh3C+7uuziK0xFXu9xzdyfHwg4S9iyiRRoPCR4k2LqaBBsWVmSBwCWYQ==}
+    dependencies:
+      prop-types: 15.8.1
     dev: false
 
   /react-to-print@2.13.0(react-dom@17.0.2)(react@17.0.2):
