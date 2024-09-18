@@ -96,6 +96,7 @@ export default ({
     } else {
       rest.onChange?.([]); // 全部清空
     }
+    setIndeterminate(false); // 设置 false
   };
   useEffect(() => {
     (async () => {
