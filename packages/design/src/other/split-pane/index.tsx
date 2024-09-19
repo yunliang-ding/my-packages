@@ -70,7 +70,10 @@ export default ({
   const onTouchStart = (event) => {
     if (!disabled) {
       unFocus(document, window);
-      const position = event.touches[0].clientX;
+      const position =
+        direction === 'vertical'
+          ? event.touches[0].clientX
+          : event.touches[0].clientY;
       setStore({
         ...store,
         active: true,
@@ -98,7 +101,7 @@ export default ({
     const current = event.touches[0].clientX;
     const { width } = pane1Ref.current.getBoundingClientRect();
     const newPane1Width = width - (position - current);
-    let newPane1Size: string | number = newPane1Width;
+    let newPane1Size: number = newPane1Width;
     if (newPane1Width <= minSize) {
       newPane1Size = minSize;
     }

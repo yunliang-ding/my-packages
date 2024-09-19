@@ -10,11 +10,11 @@ export interface SplitPaneProps {
   /** 是否可用 */
   disabled?: boolean;
   /** 最大宽度 */
-  maxSize?: string | number;
+  maxSize?: number;
   /** 最小宽度 */
-  minSize?: string | number;
+  minSize?: number;
   /** 默认宽度 */
-  defaultSize?: string | number;
+  defaultSize?: number;
   /** 左容器 */
   leftPanel: ReactNode;
   /** 右容器 */
