@@ -1,3 +1,5 @@
 ```jsx | react
-location.hash = '/design'
+export default () => {
+  location.hash = '/design';
+};
 ```
