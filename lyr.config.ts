@@ -5,7 +5,7 @@ export default defineConfig({
   favicon:
     'https://lyr-cli-oss.oss-cn-beijing.aliyuncs.com/assets/user-logo.png',
   monorepo: true,
-  monorepoPackages: ['@yl-d/design'],
+  // monorepoPackages: ['@yl-d/design'],
   link: [
     'https://lyr-cli-oss.oss-cn-beijing.aliyuncs.com/cdn/monaco-file-icon.css',
     'https://lyr-cli-oss.oss-cn-beijing.aliyuncs.com/cdn/@yl-d/design.min.css',
@@ -86,7 +86,7 @@ export default defineConfig({
   },
   menus: [
     {
-      label: '@yl-d/design',
+      label: 'Design',
       path: '/design',
       children: [
         {
@@ -412,7 +412,7 @@ export default defineConfig({
       ],
     },
     {
-      label: '@yl-d/hooks',
+      label: 'Hooks',
       path: '/hooks',
       children: [
         {
@@ -439,7 +439,7 @@ export default defineConfig({
       ],
     },
     {
-      label: '@yl-d/shared',
+      label: 'Shared',
       path: '/shared',
       children: [
         {
@@ -494,7 +494,7 @@ export default defineConfig({
       ],
     },
     {
-      label: '@yl-d/code-editor',
+      label: 'CodeEditor',
       path: '/code-editor',
       children: [
         {
@@ -521,7 +521,7 @@ export default defineConfig({
       ],
     },
     {
-      label: '@yl-d/low-code',
+      label: 'LowCode',
       path: '/low-code',
       children: [
         {
@@ -549,7 +549,7 @@ export default defineConfig({
       ],
     },
     {
-      label: '@yl-d/cli',
+      label: 'Cli',
       path: '/cli',
       children: [
         {
@@ -560,7 +560,7 @@ export default defineConfig({
       ],
     },
     {
-      label: '@yl-d/docs',
+      label: 'Docs',
       path: '/doc',
       children: [
         {
