@@ -20,3 +20,5 @@ export interface SplitPaneProps {
   /** 右容器 */
   rightPanel: ReactNode;
 }
+
+export default (props: SplitPaneProps) => null;

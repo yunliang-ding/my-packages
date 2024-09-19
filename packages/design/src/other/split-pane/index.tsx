@@ -82,30 +82,56 @@ export default ({
     const eventWithTouches = Object.assign({}, event, {
       touches: [{ clientX: event.clientX, clientY: event.clientY }],
     });
-    onTouchMove(eventWithTouches);
-  };
-  const onTouchMove = (event) => {
-    const { active, position } = store;
+    const { active } = store;
     if (!disabled && active) {
-      unFocus(document, window);
-      const current = event.touches[0].clientX;
-      const pane1Width = pane1Ref.current.getBoundingClientRect().width;
-      const newPane1Width = pane1Width - (position - current);
-      let newPane1Size: string | number = newPane1Width;
-      if (newPane1Width <= minSize) {
-        newPane1Size = minSize;
+      if (direction === 'vertical') {
+        onTouchMoveX(eventWithTouches);
+      } else {
+        onTouchMoveY(eventWithTouches);
       }
-      if (newPane1Width >= maxSize) {
-        newPane1Size = maxSize;
-      }
-      /** 调整左右宽度 */
-      setStore({
-        ...store,
-        position: position - (position - current),
-        pane1Size: newPane1Size,
-        pane2Size: `calc(100% - ${newPane1Size}px)`,
-      });
     }
+  };
+  /** 垂直线 */
+  const onTouchMoveX = (event) => {
+    const { position } = store;
+    unFocus(document, window);
+    const current = event.touches[0].clientX;
+    const { width } = pane1Ref.current.getBoundingClientRect();
+    const newPane1Width = width - (position - current);
+    let newPane1Size: string | number = newPane1Width;
+    if (newPane1Width <= minSize) {
+      newPane1Size = minSize;
+    }
+    if (newPane1Width >= maxSize) {
+      newPane1Size = maxSize;
+    }
+    setStore({
+      ...store,
+      position: position - (position - current),
+      pane1Size: newPane1Size,
+      pane2Size: `calc(100% - ${newPane1Size}px)`,
+    });
+  };
+  /** 水平线 */
+  const onTouchMoveY = (event) => {
+    const { position } = store;
+    unFocus(document, window);
+    const current = event.touches[0].clientY;
+    const { height } = pane1Ref.current.getBoundingClientRect();
+    const newPane1Height = height - (position - current);
+    let newPane1Size: string | number = newPane1Height;
+    if (newPane1Height <= minSize) {
+      newPane1Size = minSize;
+    }
+    if (newPane1Height >= maxSize) {
+      newPane1Size = maxSize;
+    }
+    setStore({
+      ...store,
+      position: position - (position - current),
+      pane1Size: newPane1Size,
+      pane2Size: `calc(100% - ${newPane1Size}px)`,
+    });
   };
   const onMouseUp = () => {
     const { active } = store;
@@ -114,6 +140,7 @@ export default ({
     }
   };
   useEffect(() => {
+    const onTouchMove = direction === 'vertical' ? onTouchMoveX : onTouchMoveY;
     document.addEventListener('mouseup', onMouseUp);
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('touchmove', onTouchMove);
