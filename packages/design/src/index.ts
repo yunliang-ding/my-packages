@@ -1,6 +1,9 @@
 import './index.less';
 export { default as Layer } from './common/layer';
 /** 通用展示 */
+export { default as Avatar } from './data-display/avatar';
+export { default as AvatarGroup } from './data-display/avatar/group';
+export { type AvatarProps } from './data-display/avatar/type';
 export { default as Button } from './general/button';
 export { type ButtonProps } from './general/button/type';
 export { default as Card } from './data-display/card';
@@ -26,8 +29,6 @@ export { default as Timeline } from './data-display/timeline';
 export { type TimelineProps } from './data-display/timeline/type';
 export { default as Space } from './data-display/space';
 export { type SpaceProps } from './data-display/space/type';
-export { default as Avatar } from './data-display/avatar';
-export { type AvatarProps } from './data-display/avatar/type';
 /** 表单元素 */
 export { default as Input } from './data-entry/input';
 export { type InputProps } from './data-entry/input/type';

@@ -27,6 +27,8 @@ export default ({ github, updateTime, require = {}, ...rest }: any) => {
   useEffect(() => {
     rest.content().then((res: any) => {
       setContent(res.default);
+    }).catch((err: any) => {
+      setContent(err.toString());
     });
   }, [rest.content]);
   // 等待 md 解析完毕拿到导航信息再重新render一次
