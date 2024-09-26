@@ -14,7 +14,7 @@ const runEsmBuild = () => {
     bundle: true,
     minify: true,
     logLevel: 'info',
-    entryPoints: ['packages/design/src/index.ts'],
+    entryPoints: ['packages/code-editor/src/index.ts'],
     plugins: [
       lessLoader(),
       externalGlobalPlugin({
@@ -26,7 +26,7 @@ const runEsmBuild = () => {
 }
   
 /** 监听 src 文件改动 */
-const watcher = chokidar.watch([`packages/design/src/**/*`], {
+const watcher = chokidar.watch([`packages/code-editor/src/**/*`], {
   ignored: /node_modules/,
   ignoreInitial: true,
 });

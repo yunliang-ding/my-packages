@@ -11,6 +11,8 @@ import loader from '@monaco-editor/loader';
 import { loadVscodeTheme } from './wasm';
 import './index.less';
 
+const hasLoadLanguage = [];
+
 export interface CodeProps {
   id?: string;
   /**
@@ -195,7 +197,10 @@ export const CodeEditor = memo(
       //  同步 window
       monacoInstance.then((editor: any) => {
         window[id] = editor;
-        loadVscodeTheme((window as any).monaco, editor, language); // 加载dark+、light+主题
+        if(!hasLoadLanguage.includes(language)){
+          loadVscodeTheme((window as any).monaco, editor, language); // 加载dark+、light+主题
+          hasLoadLanguage.push(language);
+        }
       });
       // 挂到 ref
       codeRef.current.getMonacoInstance = async () => {

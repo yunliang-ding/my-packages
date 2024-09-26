@@ -3,8 +3,8 @@ import { loadWASM } from 'onigasm';
 import { Registry } from 'monaco-textmate';
 import covertTheme from './convert-theme';
 import lightPlus from './theme/light-plus.json';
-import darkPlus from './theme/dark-plus.json';
-// import darkPlus from './theme/one-dark-pro.json';
+// import darkPlus from './theme/dark-plus.json';
+import darkPlus from './theme/one-dark-pro.json';
 
 const OssUrl = 'https://lyr-cli-oss.oss-cn-beijing.aliyuncs.com/monaco';
 
@@ -13,9 +13,6 @@ let hasLoadOnigasm = false;
 const grammarsCache = {};
 
 export const loadVscodeTheme = async (monaco, editor, language) => {
-  if(hasLoadOnigasm){
-    return;
-  }
   // 加载onigasm的WebAssembly文件
   if (!hasLoadOnigasm) {
     hasLoadOnigasm = true;
