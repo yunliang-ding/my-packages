@@ -203,6 +203,9 @@ export const CodeEditor = memo(
       };
       // 吐出 ref
       onLoad(codeRef.current);
+      return () => {
+        delete window[id]; // 卸载删除
+      }
     }, []);
     // 更新值
     useEffect(() => {

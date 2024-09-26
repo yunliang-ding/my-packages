@@ -13,6 +13,9 @@ let hasLoadOnigasm = false;
 const grammarsCache = {};
 
 export const loadVscodeTheme = async (monaco, editor, language) => {
+  if(hasLoadOnigasm){
+    return;
+  }
   // 加载onigasm的WebAssembly文件
   if (!hasLoadOnigasm) {
     hasLoadOnigasm = true;
