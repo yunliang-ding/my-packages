@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Empty, Layer } from '../..';
 import { IconClose } from '@yl-d/icon';
-import { AutoCompleteProps } from './type';
+import { MentionProps } from './type';
 import './index.less';
 
 export default ({
@@ -16,16 +16,16 @@ export default ({
   getPopupContainer,
   onChange,
   ...rest
-}: AutoCompleteProps) => {
+}: MentionProps) => {
   const selectionRef = useRef<HTMLInputElement>();
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(rest.value);
   useEffect(() => {
     setValue(rest.value);
   }, [rest.value]);
-  const classNames = ['yld-auto'];
+  const classNames = ['yld-mention'];
   if (disabled) {
-    classNames.push('yld-auto-disabled');
+    classNames.push('yld-mention-disabled');
   }
   if (className) {
     classNames.push(className);
@@ -35,9 +35,14 @@ export default ({
       <input
         ref={selectionRef}
         value={value || ''}
-        className="yld-auto-input"
+        className="yld-mention-input"
         placeholder={placeholder}
         disabled={disabled}
+        onClick={() => {
+          if (value?.endsWith(prefix)) {
+            setOpen(true);
+          }
+        }}
         onChange={(e) => {
           setValue(e.target.value || undefined);
           if (e.target.value?.endsWith(prefix)) {

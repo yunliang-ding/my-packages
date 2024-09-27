@@ -18,8 +18,8 @@ export default [
     },
   },
   {
-    type: 'AutoComplete',
-    name: 'autoComplete',
+    type: 'Mention',
+    name: 'mention',
     label: '邮箱',
     props: {
       options: [

@@ -50,7 +50,7 @@ export const InputOrSelect = [
   'Cascader',
   'DebounceSelect',
   'Select',
-  'AutoComplete',
+  'Mention',
   'Cascader',
   'TreeSelect',
   'TreeSelect',

@@ -5,7 +5,7 @@ export default defineConfig({
   favicon:
     'https://lyr-cli-oss.oss-cn-beijing.aliyuncs.com/assets/user-logo.png',
   monorepo: true,
-  monorepoPackages: ['@yl-d/design'],
+  // monorepoPackages: ['@yl-d/design'],
   link: [
     'https://lyr-cli-oss.oss-cn-beijing.aliyuncs.com/cdn/monaco-file-icon.css',
     'https://lyr-cli-oss.oss-cn-beijing.aliyuncs.com/cdn/@yl-d/design.min.css',
@@ -180,8 +180,8 @@ export default defineConfig({
           group: true,
           children: [
             {
-              label: '自动补全 AutoComplete',
-              path: '/design/data-entry/auto-complete',
+              label: '提及 Mention',
+              path: '/design/data-entry/mention',
             },
             {
               label: '级联选择 Cascader',
@@ -406,6 +406,11 @@ export default defineConfig({
             {
               label: '分隔面板 SplitPane',
               path: '/design/other/split-pane',
+            },
+            {
+              label: '虚拟列表 VirtualList',
+              path: '/design/other/virtual-list',
+              disabled: true,
             },
           ],
         },

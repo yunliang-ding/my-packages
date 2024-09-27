@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from "react";
 
-export interface AutoCompleteProps {
+export interface MentionProps {
   /** 类名 */
   className?: string;
   /** 下拉菜单的类名 */
@@ -28,4 +28,4 @@ export interface AutoCompleteProps {
   onChange?: Function;
 }
 
-export default (props: AutoCompleteProps) => null;
+export default (props: MentionProps) => null;

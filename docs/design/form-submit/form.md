@@ -24,7 +24,7 @@ export default () => {
         column={2}
         initialValues={{
           input: '2323',
-          autoComplete: '2323@163.com',
+          mention: '2323@163.com',
           inputNumber: 2323,
           select: 1,
           switch: false,

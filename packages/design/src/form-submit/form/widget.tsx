@@ -1,7 +1,7 @@
 import FormList from './list-form';
 import TableList from './list-table';
 import {
-  AutoComplete,
+  Mention,
   Cascader,
   DatePicker,
   Input,
@@ -28,7 +28,7 @@ const Block = ({ label }) => {
 };
 
 const mapping = {
-  AutoComplete,
+  Mention,
   Cascader,
   DatePicker,
   Input,

@@ -2,7 +2,7 @@
 
 ```jsx | react
 import { useState } from 'react';
-import { Space, AutoComplete, Switch } from '@yl-d/design';
+import { Space, Mention, Switch } from '@yl-d/design';
 import { IconQq, IconEmail } from '@yl-d/icon';
 
 const options = [
@@ -30,7 +30,7 @@ export default () => {
   const [disabled, setDisabled] = useState(false);
   return (
     <>
-      <AutoComplete
+      <Mention
         prefix="@"
         options={options}
         style={{ width: 200 }}
@@ -55,5 +55,5 @@ export default () => {
 ### API
 
 ```API
-/packages/design/src/data-entry/auto-complete/type.tsx
+/packages/design/src/data-entry/mention/type.tsx
 ```
