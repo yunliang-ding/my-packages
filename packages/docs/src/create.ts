@@ -47,7 +47,7 @@ const getIndexHtml = ({
 <body>
   <div id="root">
     ${spin}
-  <div>
+  </div>
 </body>
 ${script}
 <script type="module">

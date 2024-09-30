@@ -83,6 +83,21 @@ Page.auth = '/admin/list'; // 配置了 auth 则表示需要做鉴权，具体 a
 export default Page;
 ```
 
+
+## 路由缓存
+
+- 假设存在 /src/pages/user.tsx
+
+```jsx
+const Page = () => {
+  return <div>该页面下次进来依然保持原状</div>;
+};
+
+Page.keepAlive = true; // 开启该路由的缓存
+
+export default Page;
+```
+
 ## 设置面包屑
 
 - 假设存在 /src/pages/user.tsx

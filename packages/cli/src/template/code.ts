@@ -12,6 +12,7 @@ import AuthRouter from './auth';
 import { ConfigProps } from './type';
 import axios, { AxiosRequestConfig } from 'axios';
 import breadcrumbStore from '@/store/breadcrumb';
+import { Outlet } from 'react-router-dom';
 
 import '@/global.less';
 
@@ -120,6 +121,14 @@ export const useBreadCrumb = () => {
   };
 };
 
+export const KeepAliveOutlet = () => {
+  return (
+    <div className="router-keep-alive-contianer">
+      <Outlet />
+    </div>
+  );
+};
+
 export const version = "${version}";
 
 export const noticeInfo = "${noticeInfo}";
@@ -128,6 +137,38 @@ export const logo = "${logo}";
 `;
 
 export const auth = `import { initData } from './index';
+import { render } from 'react-dom';
+
+const cacheKeeepAlive = {};
+
+const keepAliveComponent = (component: any, path: any) => () => {
+  const idPath = path.replaceAll('/', '');
+  if (component.type.keepAlive) {
+    // 延迟下为了拿到 keeplive 节点
+    setTimeout(() => {
+      const wrapper = document.querySelector('.router-keep-alive-contianer');
+      if (!cacheKeeepAlive[path]) {
+        cacheKeeepAlive[path] = true;
+        let target: any = wrapper?.querySelector(idPath);
+        if (!target) {
+          target = document.createElement('div');
+          target.id = idPath;
+          target.style.display = 'block';
+          wrapper?.appendChild(target);
+        }
+        render(component, target); // 挂在到这个容器下
+      }
+      if (cacheKeeepAlive[path]) {
+        wrapper?.childNodes.forEach((item: any) => {
+          item.style.display = item.id === idPath ? 'block' : 'none';
+        });
+      }
+    }, 200);
+    return null;
+  } else {
+    return <div id={idPath}>{component}</div>
+  }
+};
 
 export default ({ path, component }: { path: string; component: any }) => {
   const hasAuth =
@@ -135,9 +176,11 @@ export default ({ path, component }: { path: string; component: any }) => {
     component.type.auth === undefined;
   return {
     path,
-    element: hasAuth ? (
-      component
-    ) : <h3>您暂无权限访问该页面!</h3>,
+    Component: hasAuth ? (
+      keepAliveComponent(component, path)
+    ) : (
+      <h3>您暂无权限访问该页面!</h3>
+    ),
   };
 };
 `;

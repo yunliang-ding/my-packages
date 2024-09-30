@@ -5,8 +5,7 @@ import userStore from '@/store/user';
 import breadcrumbStore from '@/store/breadcrumb';
 import { outLogin } from '@/services';
 import { useEffect, useRef } from 'react';
-import { Outlet } from 'react-router-dom';
-import { logo } from 'lyr';
+import { KeepAliveOutlet, logo } from 'lyr';
 
 export default ({ routerInterceptors }) => {
   const layoutRef: any = useRef({});
@@ -75,7 +74,7 @@ export default ({ routerInterceptors }) => {
       pageHeaderProps={breadcrumb}
       siderFooterRender={() => null}
     >
-      {VNode ? VNode : <Outlet />}
+      {VNode ? VNode : <KeepAliveOutlet />}
     </Layout>
   );
 };
