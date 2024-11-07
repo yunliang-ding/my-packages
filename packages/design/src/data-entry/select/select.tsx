@@ -24,8 +24,9 @@ export default ({
   const [keyword, setKeyword] = useState('');
   const selected: any = options.find((item) => item.value === value) || {};
   // 默认支持模糊查询
-  if (showSearch && filter === undefined) {
-    filter = ({ label }, value: string) => {
+  let newFilter = filter;
+  if (showSearch && newFilter === undefined) {
+    newFilter = ({ label }, value: string) => {
       return label.toLowerCase().includes(value.trim().toLowerCase());
     };
   }
@@ -86,7 +87,7 @@ export default ({
                 if (e.target.value.trim() !== '') {
                   setOptions(
                     rest.options.filter((option) =>
-                      filter?.(option, e.target.value),
+                      newFilter?.(option, e.target.value),
                     ),
                   );
                 } else {
@@ -126,7 +127,7 @@ export default ({
         >
           {options.length > 0 ? (
             options.map((option) => {
-              let className = ['yld-select-dropdown-menu'];
+              const className = ['yld-select-dropdown-menu'];
               if (option.value === value) {
                 className.push('yld-select-dropdown-menu-selected');
               }

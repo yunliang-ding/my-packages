@@ -1,7 +1,7 @@
 import { IconPlus, IconUpload } from '@yl-d/icon';
 import { Button } from '../..';
 import { UploadProps } from './type';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { uuid } from '../../tools';
 import { createOssInstance } from './util';
 import CardRender from './render-card';

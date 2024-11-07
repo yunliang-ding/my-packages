@@ -18,7 +18,7 @@ export default ({
   if (disabled || loading) {
     className += ' yld-switch-disabled';
   }
-  let innerText = checked ? checkedChildren : unCheckedChildren;
+  const innerText = checked ? checkedChildren : unCheckedChildren;
   useEffect(() => {
     setChecked(value || false);
   }, [value]);

@@ -1,7 +1,7 @@
-export default (props: any) => {
-  return props.addon ? (
-    <label className="yld-input-addon-before" title={props.addon}>
-      {props.addon}
+export default ({ addon }: any) => {
+  return addon ? (
+    <label className="yld-input-addon-before" title={addon}>
+      {addon}
     </label>
   ) : null;
 };

@@ -24,7 +24,7 @@ export const fieldNamesTransfrom = (fieldNames: any, options: any) => {
 };
 
 export const getLabelByValue = (values = [], options = []) => {
-  if (values.length == 0) {
+  if (values.length === 0) {
     return undefined;
   }
   const label = [];

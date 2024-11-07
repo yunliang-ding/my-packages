@@ -28,7 +28,7 @@ export const getLabelByValue = (key: string | string[], treeData = []) => {
     return undefined;
   }
   const values = typeof key === 'string' ? [key] : key;
-  let title = [];
+  const title = [];
   const loop = (options = []) => {
     options.forEach((item) => {
       if (values.includes(item.key)) {

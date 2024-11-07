@@ -3,9 +3,7 @@ import {
   IconDelete,
   IconDriveFile,
   IconExclamationCircleFill,
-  IconUpload,
 } from '@yl-d/icon';
-import { Button } from '../..';
 import { UploadItem } from './type';
 
 // 渲染格式

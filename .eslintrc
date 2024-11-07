@@ -1,0 +1,145 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node":true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["import", "react", "react-hooks", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "max-lines": ["warn", {
+      "max": 400, // 设置最大允许的代码行数
+      "skipBlankLines": false, // 是否包括空行在内，默认为 true
+      "skipComments": false // 是否包括注释在内，默认为 true
+    }],
+    "import/no-named-as-default": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "react-hooks/rules-of-hooks": "error", // 检查 Hook 的规则
+    "react-hooks/exhaustive-deps": "off", // 检查 effect 的依赖
+    "semi": "error",
+    "@typescript-eslint/ban-types": [
+      "off",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": "error",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "quotes": ["error", "single"],
+    "no-dupe-else-if": "error",
+    "no-tabs": "off",
+    "no-undef": "error",
+    "eol-last": "error",
+    "padded-blocks": "off",
+    "eqeqeq": "warn",
+    "space-before-blocks": "error",
+    "generator-star-spacing": ["error", "after"],
+    "require-yield": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-empty-interface": ["error", { "allowSingleExtends": true }],
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "ts-expect-error": "allow-with-description",
+        "ts-ignore": false,
+        "ts-nocheck": true,
+        "ts-check": false,
+        "minimumDescriptionLength": 4
+      }
+    ],
+    "react/display-name": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "import/no-unresolved": "error",
+    "max-len": ["error", 130],
+    "no-console": "off",
+    "spaced-comment": "error",
+    "arrow-body-style": "off",
+    "array-callback-return": ["warn", { "allowImplicit": true, "checkForEach": true }],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true,
+        "allowTaggedTemplates": true,
+        "enforceForJSX": true
+      }
+    ],
+    "class-methods-use-this": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-did-update-set-state": "off",
+    "react/no-direct-mutation-state": "error",
+    "react/jsx-wrap-multilines": "error",
+    "react/default-props-match-prop-types": "error",
+    "react/sort-comp": "off",
+    "no-param-reassign": "error",
+    "consistent-return": "off",
+    "react/prop-types": 0,
+    "react/jsx-no-bind": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/jsx-equals-spacing": 0,
+    "react/jsx-curly-spacing": [
+      2,
+      "never",
+      {
+        "allowMultiline": true,
+        "spacing": { "objectLiterals": "never" }
+      }
+    ],
+    "react/jsx-tag-spacing": 2,
+    "react/jsx-max-props-per-line": [2, { "maximum": 5, "when": "always" }],
+    "react/jsx-one-expression-per-line": [0],
+    "react/jsx-props-no-multi-spaces": 2,
+    "no-multiple-empty-lines": ["error", {"max": 1}],
+    "comma-spacing": 2,
+    "array-bracket-spacing": [2, "never"],
+    "no-trailing-spaces": "error",
+    "object-curly-spacing": ["error", "always"],
+    "keyword-spacing": ["error", { "before": true }],
+    "space-in-parens": [2, "never"],
+    "space-infix-ops": 2,
+    "key-spacing": ["error", {"beforeColon": false}],
+    "arrow-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "func-call-spacing": ["error", "never"],
+    "block-spacing": "error",
+    "computed-property-spacing": ["error", "never"],
+    "semi-spacing": "error",
+    "switch-colon-spacing": "error",
+    "template-tag-spacing": ["error", "never"],
+    "rest-spread-spacing": ["error", "never"],
+    "template-curly-spacing": "error",
+    "@typescript-eslint/key-spacing": "error",
+    "@typescript-eslint/member-delimiter-style": "error",
+    "@typescript-eslint/space-before-blocks": "error",
+    "@typescript-eslint/type-annotation-spacing": "error",
+    "@typescript-eslint/space-infix-ops": "error"
+  }
+}

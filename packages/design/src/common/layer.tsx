@@ -4,7 +4,6 @@
 import ReactDOM from 'react-dom';
 import './layer.less';
 import {
-  CSSProperties,
   forwardRef,
   ReactNode,
   useEffect,

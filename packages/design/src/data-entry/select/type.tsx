@@ -38,17 +38,15 @@ export interface SimpleSelectProps {
   getPopupContainer?: () => HTMLElement;
   /** 别名 */
   fieldNames?: {
-    label?: string,
-    value?: string,
-  }
+    label?: string;
+    value?: string;
+  };
   loading?: boolean;
 }
 
 export interface SelectProps extends Omit<SimpleSelectProps, 'options'> {
   /** 数据源 */
-  options?:
-    | ((form: FormInstance) => Promise<OptionsProps[]>)
-    | OptionsProps[];
+  options?: ((form: FormInstance) => Promise<OptionsProps[]>) | OptionsProps[];
 }
 
 export default (props: SelectProps) => null;

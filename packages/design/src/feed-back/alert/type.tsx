@@ -1,5 +1,5 @@
-import { ReactNode, CSSProperties } from "react";
-import { iconMapping } from ".";
+import { ReactNode, CSSProperties } from 'react';
+import { iconMapping } from '.';
 
 export interface AlertProps {
   message: ReactNode;

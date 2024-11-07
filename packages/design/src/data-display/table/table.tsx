@@ -144,7 +144,7 @@ export default ({
    * 内部多选
    */
   if (checkable) {
-    let column: any = {
+    const column: any = {
       title: (
         <Checkbox
           checked={isCheckedAll()}
@@ -162,7 +162,7 @@ export default ({
           <Checkbox
             checked={checkedkeys.includes(record[rowKey || 'key'])}
             onChange={() => {
-              let index = checkedkeys.indexOf(record[rowKey || 'key']);
+              const index = checkedkeys.indexOf(record[rowKey || 'key']);
               if (index > -1) {
                 checkedkeys.splice(index, 1);
               } else {

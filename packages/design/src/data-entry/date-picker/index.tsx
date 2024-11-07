@@ -30,11 +30,6 @@ export default ({
   const [year, setYear] = useState(dateUtil.date.getFullYear());
   const [month, setMonth] = useState(dateUtil.date.getMonth() + 1);
   const [calendar, setCalendar] = useState(dateUtil.getCalendar());
-  useEffect(() => {
-    let date = rest.value || new Date().getTime();
-    setValue(rest.value); // update
-    updateDateCalendar(date); // 更新时间
-  }, [rest.value]);
   const renderHeader = () => {
     return ['一', '二', '三', '四', '五', '六', '日'].map((item) => {
       return (
@@ -84,6 +79,11 @@ export default ({
     setYear(dateUtil.date.getFullYear());
     setMonth(dateUtil.date.getMonth() + 1);
   };
+  useEffect(() => {
+    const date = rest.value || new Date().getTime();
+    setValue(rest.value); // update
+    updateDateCalendar(date); // 更新时间
+  }, [rest.value]);
   const selectionRef = useRef<HTMLDivElement>();
   const classNames = ['yld-date-picker'];
   // 是否展示清空按钮

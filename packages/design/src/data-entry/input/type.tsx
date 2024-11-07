@@ -1,5 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
-
+import { CSSProperties, ReactNode } from 'react';
 
 export interface InputProps {
   /** 样式 */

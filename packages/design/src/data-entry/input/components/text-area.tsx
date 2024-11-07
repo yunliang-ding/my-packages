@@ -1,4 +1,4 @@
-import { InputProps } from "../type";
+import { InputProps } from '../type';
 
 export default ({
   value,

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default-member */
 import { RateProps } from './type';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import NP from 'number-precision';
@@ -119,14 +120,14 @@ export default ({
           {...(!allowHalf ? getAriaProps() : {})}
         >
           <div
-            className={`yld-rate-character-left`}
+            className={'yld-rate-character-left'}
             {...leftProps}
             {...(allowHalf ? getAriaProps(true) : {})}
           >
             {_usedCharacter}
           </div>
           <div
-            className={`yld-rate-character-right`}
+            className={'yld-rate-character-right'}
             {...rightProps}
             {...(allowHalf ? getAriaProps() : {})}
           >
@@ -144,7 +145,7 @@ export default ({
       onMouseLeave={resetHoverIndex}
     >
       <div className="yld-rate-inner">
-        {Array.apply(null, Array(count)).map((_, index) =>
+        {new Array(count).fill('').map((_, index) =>
           renderCharacter(index),
         )}
       </div>

@@ -2,7 +2,7 @@ import { BadgeProps } from './type';
 import './index.less';
 
 export default ({ color, count, dot = false, children }: BadgeProps | any) => {
-  let style: any = {};
+  const style: any = {};
   if (color) {
     style.backgroundColor = color;
   }

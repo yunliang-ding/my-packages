@@ -19,11 +19,11 @@ export default ({
   const [selectedKeys, setSelectedKeys] = useState(rest.selectedKey);
   const renderTree = (treeData: TreeNode[], level = 0) => {
     return treeData.map((item) => {
-      let className = ['yld-tree-node'];
+      const className = ['yld-tree-node'];
       if (item.disabled || disabled) {
         className.push('yld-tree-node-disabled');
       }
-      let labelClassName = ['yld-tree-node-label'];
+      const labelClassName = ['yld-tree-node-label'];
       if (expandedKeys.includes(item.key)) {
         labelClassName.push('yld-tree-node-label-open');
       }
@@ -69,7 +69,7 @@ export default ({
                   disabled={item.disabled || disabled || item.selectable === false}
                   checked={checkedKeys.includes(item.key)}
                   onChange={() => {
-                    let findIndex = checkedKeys.findIndex((key) => {
+                    const findIndex = checkedKeys.findIndex((key) => {
                       return key === item.key;
                     });
                     if (findIndex > -1) {

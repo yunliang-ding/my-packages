@@ -33,6 +33,23 @@ export interface MessageProps {
   icon?: ReactNode;
 }
 
+const renderMessage = (
+  type: number,
+  option: MessageProps,
+  closeMsg: Function,
+) => {
+  return (
+    <div
+      className="yld-message-content"
+      style={{ paddingRight: option.closable ? 20 : 10 }}
+    >
+      {option.icon ? option.icon : iconMapping[type]}
+      <div className="yld-message-content-message">{option.content}</div>
+      {option.closable && <IconClose onClick={closeMsg} />}
+    </div>
+  );
+};
+
 export default () => {
   const open = (type: number, option: ReactNode | MessageProps) => {
     const defaultOption: MessageProps = {
@@ -49,8 +66,8 @@ export default () => {
     } else {
       defaultOption.content = option;
     }
-    let messageContainer = document.createElement('div');
-    let length = $$('.yld-message').length;
+    const messageContainer = document.createElement('div');
+    const length = $$('.yld-message').length;
     messageContainer.className = 'yld-message';
     if (defaultOption.position === 'bottom') {
       messageContainer.style.left = 'auto';
@@ -74,22 +91,6 @@ export default () => {
     );
     // 返回关闭的钩子
     return () => messageContainer.remove();
-  };
-  const renderMessage = (
-    type: number,
-    option: MessageProps,
-    closeMsg: Function,
-  ) => {
-    return (
-      <div
-        className="yld-message-content"
-        style={{ paddingRight: option.closable ? 20 : 10 }}
-      >
-        {option.icon ? option.icon : iconMapping[type]}
-        <div className="yld-message-content-message">{option.content}</div>
-        {option.closable && <IconClose onClick={closeMsg} />}
-      </div>
-    );
   };
   return {
     success: (option: ReactNode | MessageProps): Function => {

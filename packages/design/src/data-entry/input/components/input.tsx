@@ -26,13 +26,17 @@ export default ({
   showCount = false,
   ...rest
 }: InputProps) => {
-  let style: any = {};
+  const style: any = {};
   prefix && (style.paddingLeft = 30);
   suffix && (style.paddingRight = 30);
-  addonBefore &&
-    ((style.borderTopLeftRadius = 0), (style.borderBottomLeftRadius = 0));
-  addonAfter &&
-    ((style.borderTopRightRadius = 0), (style.borderBottomRightRadius = 0));
+  if (addonBefore) {
+    style.borderTopLeftRadius = 0;
+    style.borderBottomLeftRadius = 0;
+  }
+  if (addonAfter) {
+    style.borderTopRightRadius = 0;
+    style.borderBottomRightRadius = 0;
+  }
   const [password, setPassword] = useState(type === 'password');
   // 多种情况
   let suffixNode = suffix ? <Suffix>{suffix}</Suffix> : null;

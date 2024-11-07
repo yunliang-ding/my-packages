@@ -17,13 +17,10 @@ export default ({
   const [style, setStyle]: any = useState({});
   const toolTipRef: any = useRef();
   const toolTipInnerRef: any = useRef();
-  useEffect(() => {
-    updatePosition();
-  }, [title]);
   const updatePosition = () => {
     if (toolTipRef.current) {
-      let style: any = {};
-      let element = toolTipRef.current.firstElementChild
+      const style: any = {};
+      const element = toolTipRef.current.firstElementChild
         ? toolTipRef.current.firstElementChild
         : toolTipRef.current;
       const { left, width, height, top } = element.getBoundingClientRect();
@@ -48,6 +45,9 @@ export default ({
     }
   };
   useEffect(() => {
+    updatePosition();
+  }, [title]);
+  useEffect(() => {
     const onResize = debounce(() => {
       updatePosition();
     });
@@ -59,7 +59,7 @@ export default ({
   /**
    * 组装clasName
    */
-  let className = ['yld-tooltip'];
+  const className = ['yld-tooltip'];
   if (placement === 'top') {
     className.push('yld-tooltip-placement-top');
   } else if (placement === 'left') {

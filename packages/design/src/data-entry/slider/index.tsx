@@ -3,6 +3,8 @@ import { Tooltip } from '../..';
 import { SliderProps } from './type';
 import './index.less';
 
+const noop = () => {};
+
 export default ({
   min = 0,
   max = 100,
@@ -12,7 +14,7 @@ export default ({
   style,
   tooltipVisible = false,
 }: SliderProps) => {
-  const noop = () => {};
+  const [_value, setValue] = useState(value);
   useEffect(() => {
     if (value < min) {
       setValue(min);
@@ -22,7 +24,6 @@ export default ({
       setValue(value);
     }
   }, [value]);
-  const [_value, setValue] = useState(value);
   const [status, setStatus] = useState(false);
   const [position, setPosition]: any = useState({});
   const [coefficient, setCoefficient]: any = useState(1); // 系数 1px对应的value
@@ -47,10 +48,10 @@ export default ({
         onClick={({ pageX }) => {
           if (disabled) return;
           const { x } = sliderHandleRef.current.getBoundingClientRect();
-          let __value: any = Number(_value) + Number((pageX - x) * coefficient);
+          const __value: any = Number(_value) + Number((pageX - x) * coefficient);
           if (__value >= min && __value <= max) {
             setValue(parseInt(__value));
-            let number: any = Math.round(__value);
+            const number: any = Math.round(__value);
             onChange?.(parseInt(number));
           }
         }}
@@ -92,13 +93,13 @@ export default ({
             onMouseUp={() => {
               if (disabled) return;
               setStatus(false);
-              let number: any = Math.round(_value);
+              const number: any = Math.round(_value);
               onChange?.(parseInt(number));
             }}
             onMouseMove={({ pageX }) => {
               if (disabled) return;
               if (status) {
-                let __value: any =
+                const __value: any =
                   Number(_value) + Number((pageX - position.x) * coefficient);
                 if (__value >= min && __value <= max) {
                   setValue(parseInt(__value));

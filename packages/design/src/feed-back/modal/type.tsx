@@ -1,5 +1,5 @@
-import { ReactNode, CSSProperties } from "react";
-import { ActionProps } from "../..";
+import { ReactNode, CSSProperties } from 'react';
+import { ActionProps } from '../..';
 
 export interface ModalProps {
   containId?: string;

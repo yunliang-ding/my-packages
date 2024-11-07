@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode } from 'react';
 
 export interface AvatarProps {
   /** 样式 */
@@ -9,6 +9,5 @@ export interface AvatarProps {
   size?: number;
   children?: ReactNode | ReactNode[];
 }
-
 
 export default (props: AvatarProps) => null;

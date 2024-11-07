@@ -63,10 +63,10 @@ export default ({ rowKey, dataSource, columns, scroll, bordered, width }) => {
                   ((scroll.x || width) - defineColumnWidth) /
                     (columns.length - defineColumn.length),
               };
-              let label = column.render
+              const label = column.render
                 ? column.render(data[column.dataIndex], data, index)
                 : data[column.dataIndex];
-              let columnClassName = ['yld-table-td'];
+              const columnClassName = ['yld-table-td'];
               if (column.ellipsis) {
                 columnClassName.push('yld-table-td-ellipsis');
               }
@@ -75,7 +75,7 @@ export default ({ rowKey, dataSource, columns, scroll, bordered, width }) => {
               }
               if (scroll?.x) {
                 if (column.fixed === 'left') {
-                  columnClassName.push(`yld-table-td-fixed-left`);
+                  columnClassName.push('yld-table-td-fixed-left');
                   tdStyle.left = defineFixedLeft
                     .slice(0, _index)
                     .reduce((a, b) => ({ width: a.width + b.width }), {
@@ -83,7 +83,7 @@ export default ({ rowKey, dataSource, columns, scroll, bordered, width }) => {
                     }).width;
                 }
                 if (column.fixed === 'right') {
-                  columnClassName.push(`yld-table-td-fixed-right`);
+                  columnClassName.push('yld-table-td-fixed-right');
                   tdStyle.right = defineFixedRight
                     .slice(
                       defineFixedRight.length - (columns.length - _index) + 1,

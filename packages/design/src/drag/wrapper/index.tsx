@@ -1,9 +1,5 @@
-import {
-  cloneElement,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+/* eslint-disable react-hooks/rules-of-hooks */
+import { cloneElement, useEffect, useMemo, useState } from 'react';
 import { uuid } from '../../tools';
 import { DragWrapperProps } from './type';
 
@@ -63,8 +59,7 @@ const Item = ({
     onDragLeave: (e) => {
       e.stopPropagation();
       if (accept) {
-        e.currentTarget.style.borderLeft =
-          '3px solid var(--bg-color)';
+        e.currentTarget.style.borderLeft = '3px solid var(--bg-color)';
       }
     },
     onDrop: (e) => {
@@ -80,8 +75,7 @@ const Item = ({
         }
       }
       if (accept) {
-        e.currentTarget.style.borderLeft =
-          '3px solid var(--bg-color)';
+        e.currentTarget.style.borderLeft = '3px solid var(--bg-color)';
       }
     },
     onDragStart: (e) => {
@@ -96,8 +90,7 @@ const Item = ({
       delete store.dragId;
       e.currentTarget.style.opacity = '1';
       if (accept) {
-        e.currentTarget.style.borderLeft =
-          '3px solid var(--bg-color)';
+        e.currentTarget.style.borderLeft = '3px solid var(--bg-color)';
       }
     },
   });
@@ -115,7 +108,7 @@ const DragWrapper = ({
   useEffect(() => {
     if (items) {
       store[dragId] = items; // 存进去
-      () => {
+      return () => {
         delete store[dragId];
       };
     }

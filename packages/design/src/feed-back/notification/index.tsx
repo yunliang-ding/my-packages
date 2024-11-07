@@ -25,6 +25,27 @@ export interface NotificationProps {
   content?: ReactNode;
 }
 
+const renderMessage = (
+  type: number,
+  option: NotificationProps,
+  closeNotify: Function,
+) => {
+  return (
+    <div className="yld-notification-content">
+      <div className="yld-notification-content-header">
+        <div className="yld-notification-content-header-title">
+          {iconMapping[type]}
+          <span>{option.title || '提示'}</span>
+        </div>
+        <div className="yld-notification-content-header-close">
+          <IconClose onClick={closeNotify} />
+        </div>
+      </div>
+      <div className="yld-notification-content-info">{option.content}</div>
+    </div>
+  );
+};
+
 export default () => {
   const open = (type: number, option: NotificationProps | ReactNode) => {
     const defaultOption: NotificationProps = {
@@ -39,8 +60,8 @@ export default () => {
     } else {
       defaultOption.content = option;
     }
-    let messageContainer = document.createElement('div');
-    let length = $$('.yld-notification').length;
+    const messageContainer = document.createElement('div');
+    const length = $$('.yld-notification').length;
     messageContainer.className = 'yld-notification';
     messageContainer.style.top = 30 + length * 120 + 'px';
     $('body').appendChild(messageContainer);
@@ -54,28 +75,7 @@ export default () => {
       messageContainer,
     );
   };
-  const renderMessage = (
-    type: number,
-    option: NotificationProps,
-    closeNotify: Function,
-  ) => {
-    return (
-      <div className="yld-notification-content">
-        <div className="yld-notification-content-header">
-          <div className="yld-notification-content-header-title">
-            {iconMapping[type]}
-            <span>{option.title || '提示'}</span>
-          </div>
-          <div className="yld-notification-content-header-close">
-            <IconClose onClick={closeNotify} />
-          </div>
-        </div>
-        <div className="yld-notification-content-info">
-          {option.content}
-        </div>
-      </div>
-    );
-  };
+
   return {
     success: (option: ReactNode | NotificationProps) => {
       open(1, option);

@@ -34,7 +34,7 @@ const Drawer = ({
     },
   ],
 }: DrawerProps) => {
-  let className = ['yld-drawer'];
+  const className = ['yld-drawer'];
   if (placement === 'left') {
     className.push('yld-drawer-left');
   }

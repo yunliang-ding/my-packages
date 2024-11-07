@@ -27,10 +27,10 @@ export default ({
 }: CarouselProps) => {
   let timer: any;
   /** update */
+  const [_currentPage, setCurrentPage] = useState(currentPage);
   useEffect(() => {
-    setcurrentPage(currentPage);
+    setCurrentPage(currentPage);
   }, [currentPage]);
-  const [_currentPage, setcurrentPage] = useState(currentPage);
   const updateCurrentPage = (page: number) => {
     clearTimeout(timer); // clear
     let currentPage = 1;
@@ -41,7 +41,7 @@ export default ({
     } else {
       currentPage = page;
     }
-    setcurrentPage(currentPage);
+    setCurrentPage(currentPage);
     onChange?.(currentPage);
   };
   const Play = () => {
@@ -90,7 +90,7 @@ export default ({
   return (
     <>
       <div
-        className={`yld-carousel`}
+        className={'yld-carousel'}
         style={style}
         onTouchStart={touchstart}
         onTouchMove={touchmove}

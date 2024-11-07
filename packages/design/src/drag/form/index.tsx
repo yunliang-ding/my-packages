@@ -102,13 +102,13 @@ const loopRender = (
 };
 
 export default ({
-  items,
   onChange,
   onSelected,
   selectedKey,
   type = 'card',
   ...rest
 }: DragFormProps) => {
+  let items = rest.items;
   const dragId = useMemo(() => uuid(8), []); // 唯一id
   if (isEmpty(items)) {
     items = [

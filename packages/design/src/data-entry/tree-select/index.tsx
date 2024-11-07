@@ -23,7 +23,9 @@ const TreeData = ({
   const selectionRef = useRef<HTMLDivElement>();
   const choiceRef = useRef<HTMLDivElement>();
   const [open, setOpen] = useState(false);
-  const [options, setOptions] = useState(fieldNamesTransfrom(fieldNames, cloneDeep(rest.treeData)));
+  const [options, setOptions] = useState(
+    fieldNamesTransfrom(fieldNames, cloneDeep(rest.treeData)),
+  );
   useEffect(() => {
     setOptions(fieldNamesTransfrom(fieldNames, cloneDeep(rest.treeData)));
   }, [rest.treeData]);
@@ -57,7 +59,7 @@ const TreeData = ({
               style={{ fontSize: 12 }}
               onClick={(e: any) => {
                 e.stopPropagation(); // 阻止冒泡
-                let v = value.filter((i) => i !== tag.key);
+                const v = value.filter((i) => i !== tag.key);
                 setValue([...v]);
                 onChange?.(v);
               }}

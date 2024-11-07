@@ -12,7 +12,7 @@ export default ({
     <div className={`yld-desc yld-desc-${direction}`} style={style}>
       {title && <div className="yld-desc-title">{title}</div>}
       <div className={`yld-desc-grid yld-desc-grid-${column}`}>
-        {data?.map((item) => {
+        {data?.map((item: any) => {
           return (
             <div
               key={item.label}

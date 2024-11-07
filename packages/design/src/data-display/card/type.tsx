@@ -1,6 +1,6 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode } from 'react';
 
-export interface CardProps{
+export interface CardProps {
   /** 标题 */
   title?: ReactNode;
   /** 类名 */

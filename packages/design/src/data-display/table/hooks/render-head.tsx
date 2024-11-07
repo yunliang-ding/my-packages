@@ -1,4 +1,4 @@
-import { IconCaretDown, IconCaretUp } from "@yl-d/icon";
+import { IconCaretDown, IconCaretUp } from '@yl-d/icon';
 
 export default ({ scroll, columns, bordered, query, width }) => {
   const defineColumn = columns.filter((i) => i.width);
@@ -18,16 +18,16 @@ export default ({ scroll, columns, bordered, query, width }) => {
               ((scroll.x || width) - defineColumnWidth) /
                 (columns.length - defineColumn.length),
           };
-          let columnClassName = ['yld-table-td'];
+          const columnClassName = ['yld-table-td'];
           if (column.sort) {
             columnClassName.push('yld-table-td-sort');
           }
           if (bordered) {
             columnClassName.push('yld-table-td-grid');
           }
-          if(scroll?.x){
+          if (scroll?.x) {
             if (column.fixed === 'left') {
-              columnClassName.push(`yld-table-td-fixed-left`);
+              columnClassName.push('yld-table-td-fixed-left');
               tdStyle.left = defineFixedLeft
                 .slice(0, _index)
                 .reduce((a, b) => ({ width: a.width + b.width }), {
@@ -35,7 +35,7 @@ export default ({ scroll, columns, bordered, query, width }) => {
                 }).width;
             }
             if (column.fixed === 'right') {
-              columnClassName.push(`yld-table-td-fixed-right`);
+              columnClassName.push('yld-table-td-fixed-right');
               tdStyle.right = defineFixedRight
                 .slice(defineFixedRight.length - (columns.length - _index) + 1)
                 .reduce((a, b) => ({ width: a.width + b.width }), {

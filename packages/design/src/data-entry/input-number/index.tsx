@@ -30,7 +30,7 @@ export default ({
     onChange?.(value);
   };
   const add = () => {
-    let value = BigNumber.add(innerValue, step);
+    const value = BigNumber.add(innerValue, step);
     if (max !== undefined) {
       value <= max && setValue(value);
     } else {
@@ -38,7 +38,7 @@ export default ({
     }
   };
   const minus = () => {
-    let value = BigNumber.minus(innerValue, step);
+    const value = BigNumber.minus(innerValue, step);
     if (min !== undefined) {
       value >= min && setValue(value);
     } else {
@@ -55,7 +55,7 @@ export default ({
         type="number"
         className={disabled ? 'yld-input-number-disabled' : 'yld-input-number'}
         placeholder={placeholder}
-        value={innerValue || ""}
+        value={innerValue || ''}
         disabled={disabled}
         onWheel={(e: any) => e.target.blur()}
         maxLength={maxLength}

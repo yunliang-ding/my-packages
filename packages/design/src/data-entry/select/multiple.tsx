@@ -81,7 +81,7 @@ export default ({
                           style={{ fontSize: 12 }}
                           onClick={(e: any) => {
                             e.stopPropagation(); // 阻止冒泡
-                            let v = value.filter((i) => i !== item.value);
+                            const v = value.filter((i) => i !== item.value);
                             setValue([...v]);
                             onChange?.(v);
                           }}
@@ -132,7 +132,7 @@ export default ({
                   onClick={() => {
                     if (option.disabled) return;
                     // 没有则添加，有则删除
-                    let index = value.indexOf(option.value);
+                    const index = value.indexOf(option.value);
                     if (index === -1) {
                       value.push(option.value);
                     } else {
