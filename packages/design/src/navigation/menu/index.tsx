@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable array-callback-return */
 import { useState, useEffect } from 'react';
 import { MenuProps } from './type';
 import './index.less';
@@ -27,7 +29,7 @@ export default ({
   const isSelected = (menus) => {
     // 判断是否有子节点选中
     return menus.some((item) => {
-      if (selectKey == item.path) {
+      if (selectKey === item.path) {
         return true;
       } else if (item.children) {
         return isSelected(item.children);
@@ -85,19 +87,19 @@ export default ({
   };
   const renderMenus = (menus, paddingLeft) => {
     return menus.map((item) => {
-      let className = ['yld-menu-subMenu'];
+      const className = ['yld-menu-subMenu'];
       /** className */
       if (item.children && isSelected(item.children)) {
         className.push('yld-menu-subMenu-selected');
       }
-      if (selectKey == item.path) {
+      if (selectKey === item.path) {
         className.push('yld-menu-subMenu-active');
       }
       if (item.disabled) {
         className.push('yld-menu-subMenu-disabled');
       }
       /** labelClassName */
-      let labelClassName = ['yld-menu-subMenu-label'];
+      const labelClassName = ['yld-menu-subMenu-label'];
       if (openKey.includes(item.path) || openMenu) {
         labelClassName.push('yld-menu-subMenu-label-open');
       }
@@ -135,7 +137,11 @@ export default ({
       className={className.join(' ')}
       style={{
         ...style,
-        width: collapsed ? collapsedWidth : style ? (style as any).width : '100%',
+        width: collapsed
+          ? collapsedWidth
+          : style
+          ? (style as any).width
+          : '100%',
       }}
     >
       {renderMenus(menus, 20)}

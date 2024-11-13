@@ -1,4 +1,4 @@
-import { AnchorProps, CardFormProps } from "../..";
+import { AnchorProps, CardFormProps } from '../..';
 
 export interface AnchorFormProps extends AnchorProps {
   /** form 属性 */

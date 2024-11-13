@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { ModalFormProps } from './type';
 import { Modal, Form } from '../..';
 import Footer from '../footer';

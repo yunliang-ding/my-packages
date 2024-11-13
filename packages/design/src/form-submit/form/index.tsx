@@ -1,3 +1,5 @@
+/* eslint-disable no-async-promise-executor */
+/* eslint-disable react-hooks/rules-of-hooks */
 import AsyncValidator from 'async-validator';
 import { useRef, useEffect, useState } from 'react';
 import { FormProps, FormRefInstance } from './type.form';
@@ -62,9 +64,9 @@ const Form = ({
         });
         validator.validate({ [name]: value }, (errors) => {
           if (errors) {
-            errors.map((error) => {
-              itemRef.current[error.field].showError(error.message);
-            });
+            errors.map((error) =>
+              itemRef.current[error.field].showError(error.message),
+            );
           } else if (
             Array.isArray(value) &&
             value.filter((i) => i !== undefined).length === 0
@@ -96,20 +98,20 @@ const Form = ({
           }
           validator.validate(values, (errors) => {
             if (errors) {
-              errors.map((error) => {
+              errors.forEach((error) => {
                 itemRef.current[error.field].showError(error.message);
               });
               // 找到在errorItemRef里面却不在errors里的需要清除下
               const needClear = errorItemRef.current.filter(
                 (i) => !errors.some((error) => error.field === i.field),
               );
-              needClear.map((error) => {
+              needClear.forEach((error) => {
                 itemRef.current[error.field].clearError();
               });
               errorItemRef.current = errors; // 更新
               rej(errors);
             } else {
-              errorItemRef.current.map((error) => {
+              errorItemRef.current.forEach((error) => {
                 itemRef.current[error.field].clearError();
               });
               errorItemRef.current = []; // 清空
@@ -135,7 +137,9 @@ const Form = ({
     if (item.type === 'FieldSet') {
       const VNode = (
         <div className="yld-form-fieldset">
-          <div className="yld-form-fieldset-head" id={item.name}>{item.label}</div>
+          <div className="yld-form-fieldset-head" id={item.name}>
+            {item.label}
+          </div>
           <div
             className={`yld-form-fieldset-body yld-form-grid-${
               item.props?.column || 1

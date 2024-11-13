@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { CSSProperties, useRef } from 'react';
+import { CSSProperties, useRef, useEffect, useState } from 'react';
 import { SplitPaneProps } from './type';
 import Resizer from './resizer';
 import Pane from './pane';
@@ -11,7 +10,9 @@ const unFocus = (document, window) => {
   } else {
     try {
       window.getSelection().removeAllRanges();
-    } catch (e) {}
+    } catch (e) {
+      console.log(e);
+    }
   }
 };
 
@@ -61,12 +62,6 @@ export default ({
       width: '100%',
     });
   }
-  const onMouseDown = (event: any) => {
-    const eventWithTouches = Object.assign({}, event, {
-      touches: [{ clientX: event.clientX, clientY: event.clientY }],
-    });
-    onTouchStart(eventWithTouches);
-  };
   const onTouchStart = (event) => {
     if (!disabled) {
       unFocus(document, window);
@@ -81,18 +76,11 @@ export default ({
       });
     }
   };
-  const onMouseMove = (event) => {
+  const onMouseDown = (event: any) => {
     const eventWithTouches = Object.assign({}, event, {
       touches: [{ clientX: event.clientX, clientY: event.clientY }],
     });
-    const { active } = store;
-    if (!disabled && active) {
-      if (direction === 'vertical') {
-        onTouchMoveX(eventWithTouches);
-      } else {
-        onTouchMoveY(eventWithTouches);
-      }
-    }
+    onTouchStart(eventWithTouches);
   };
   /** 垂直线 */
   const onTouchMoveX = (event) => {
@@ -135,6 +123,19 @@ export default ({
       pane1Size: newPane1Size,
       pane2Size: `calc(100% - ${newPane1Size}px)`,
     });
+  };
+  const onMouseMove = (event) => {
+    const eventWithTouches = Object.assign({}, event, {
+      touches: [{ clientX: event.clientX, clientY: event.clientY }],
+    });
+    const { active } = store;
+    if (!disabled && active) {
+      if (direction === 'vertical') {
+        onTouchMoveX(eventWithTouches);
+      } else {
+        onTouchMoveY(eventWithTouches);
+      }
+    }
   };
   const onMouseUp = () => {
     const { active } = store;

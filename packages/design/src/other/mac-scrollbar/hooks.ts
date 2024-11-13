@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable no-undef */
 import type { RefObject } from 'react';
 import { useRef, useEffect, useCallback } from 'react';
 

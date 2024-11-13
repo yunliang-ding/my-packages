@@ -1,4 +1,4 @@
-import { ButtonProps, FormProps } from "..";
+import { ButtonProps, FormProps } from '..';
 
 export interface ActionProps extends ButtonProps {
   /** 文案 */

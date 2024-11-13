@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface AnchorProps {
   /** 数据源描述 */
@@ -20,4 +20,4 @@ export interface AnchorProps {
   scrollElement?: string;
 }
 
-export default (props: AnchorProps) => null
+export default (props: AnchorProps) => null;

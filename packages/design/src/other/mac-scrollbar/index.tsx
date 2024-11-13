@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 import { isEnableStyle, scrollTo } from './util';
 import type { ScrollbarProps } from './type';

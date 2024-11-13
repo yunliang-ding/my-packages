@@ -4,7 +4,7 @@ import { RightProps } from './right.type';
 
 export interface LayoutProps {
   style?: CSSProperties;
-  /** 
+  /**
    * 布局方式
    * @default vertical
    */

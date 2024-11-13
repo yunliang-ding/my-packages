@@ -28,9 +28,9 @@ export default ({
     setpageNum(pageNum);
     onChange?.(pageNum);
   };
-  let totalPage = Math.ceil(total / _pageSize);
-  let page = [];
-  let arr = [1];
+  const totalPage = Math.ceil(total / _pageSize);
+  const page = [];
+  const arr = [1];
   if (totalPage > 8) {
     // 默认大于8 转为更多模式
     if (_pageNum > 5 && _pageNum + 5 < totalPage) {
@@ -103,10 +103,10 @@ export default ({
       <div className="yld-pagination">
         <div
           className={
-            _pageNum == 1 ? 'yld-pagination-pre-disabled' : 'yld-pagination-pre'
+            _pageNum === 1 ? 'yld-pagination-pre-disabled' : 'yld-pagination-pre'
           }
           onClick={() => {
-            if (_pageNum != 1) {
+            if (_pageNum !== 1) {
               pageChange(_pageNum - 1);
             }
           }}
@@ -116,7 +116,7 @@ export default ({
         {page}
         <div
           className={
-            _pageNum == totalPage
+            _pageNum === totalPage
               ? 'yld-pagination-next-disabled'
               : 'yld-pagination-next'
           }
@@ -158,7 +158,7 @@ export default ({
               max={totalPage}
               control={false}
               onBlur={(e) => {
-                let num = parseInt(e.target.value);
+                const num = parseInt(e.target.value);
                 if (!isNaN(num)) {
                   const pageNum = num > totalPage ? totalPage : num;
                   setpageNum(pageNum);

@@ -1,6 +1,6 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode } from 'react';
 
-export interface BreadcrumbProps{
+export interface BreadcrumbProps {
   /** 分隔符 */
   separator?: ReactNode;
   maxCount?: number;
@@ -11,9 +11,9 @@ export interface BreadcrumbProps{
   /** 数据源 */
   items: {
     icon?: ReactNode;
-    path?: string,
-    breadcrumbName: string,
-  }[],
+    path?: string;
+    breadcrumbName: string;
+  }[];
 }
 
 export default (props: BreadcrumbProps) => null;

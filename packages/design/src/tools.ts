@@ -18,18 +18,6 @@ export const isEmpty = (param: any) => {
   return false;
 };
 
-/** 浮点数运算 */
-export const BigNumber = {
-  /** 加 */
-  add: (...args: any[]) => calculate(args, 'plus'),
-  /** 减 */
-  minus: (...args: any[]) => calculate(args, 'minus'),
-  /** 乘 */
-  multiplie: (...args: any[]) => calculate(args, 'multipliedBy'),
-  /** 除 */
-  divided: (...args: any[]) => calculate(args, 'dividedBy'),
-};
-
 const calculate: any = (
   args: any[],
   type: 'plus' | 'minus' | 'multipliedBy' | 'dividedBy',
@@ -41,6 +29,18 @@ const calculate: any = (
       })
       .toString(),
   );
+};
+
+/** 浮点数运算 */
+export const BigNumber = {
+  /** 加 */
+  add: (...args: any[]) => calculate(args, 'plus'),
+  /** 减 */
+  minus: (...args: any[]) => calculate(args, 'minus'),
+  /** 乘 */
+  multiplie: (...args: any[]) => calculate(args, 'multipliedBy'),
+  /** 除 */
+  divided: (...args: any[]) => calculate(args, 'dividedBy'),
 };
 
 export const uuid = (size: number) => {

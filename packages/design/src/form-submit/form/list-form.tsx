@@ -65,7 +65,7 @@ export default memo(
             <div className="yld-form-list-item">
               <div className="yld-form-list-item-head">
                 <label>
-                  {title || "选项"}-{index + 1}
+                  {title || '选项'}-{index + 1}
                 </label>
                 <Space>
                   <IconDelete

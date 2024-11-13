@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { FormInstance } from './type.instance';
 
 export interface ItemTypeProps {

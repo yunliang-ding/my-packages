@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode } from 'react';
 
 export interface StepsProps {
   /** 当前步骤 */
@@ -13,7 +13,6 @@ export interface StepsProps {
     description?: ReactNode;
     icon?: ReactNode;
   }[];
-
-};
+}
 
 export default (props: StepsProps) => null;

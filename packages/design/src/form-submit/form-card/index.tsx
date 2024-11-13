@@ -18,6 +18,7 @@ export default ({
   className,
   ...rest
 }: CardFormProps) => {
+  const bodyRef = useRef<HTMLDivElement>();
   const actions = rest.actions || [
     {
       label: cancelText,
@@ -66,7 +67,6 @@ export default ({
   if (className) {
     classNames.push(className);
   }
-  const bodyRef = useRef<HTMLDivElement>();
   return (
     <div className={classNames.join(' ')} style={{ width }}>
       <div className="yld-card-form-header">{title}</div>

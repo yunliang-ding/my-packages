@@ -41,7 +41,7 @@ export function computeRatio(
   scrollSize: number,
   clientSize: number,
   gapSize: number,
-  minThumbSize: number = 20,
+  minThumbSize = 20,
 ) {
   const boxSize = clientSize - gapSize;
   const realThumbSize = (boxSize / scrollSize) * boxSize;

@@ -1,4 +1,4 @@
-import { Message } from "../..";
+import { Message } from '../..';
 
 const copyToClipBoard = async (text, tips) => {
   /** navigator clipboard 需要https等安全上下文 */

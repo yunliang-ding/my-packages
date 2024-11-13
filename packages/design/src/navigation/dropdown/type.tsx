@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface DropdownProps {
   /** 下拉容器 */
@@ -8,7 +8,7 @@ export interface DropdownProps {
   /** 挂载容器类名 */
   layerClassName?: string;
   /** 触发方式 */
-  trigger?: 'hover' | 'click' | 'contextMenu'
+  trigger?: 'hover' | 'click' | 'contextMenu';
   children: ReactNode;
 }
 
