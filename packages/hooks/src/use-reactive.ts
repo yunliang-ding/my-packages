@@ -1,16 +1,16 @@
 /**
  * 参考 a-hooks useReactive
  */
-import { useRef } from "react";
-import type { DependencyList } from "react";
-import useRefresh from "./use-refresh";
+import { useRef } from 'react';
+import type { DependencyList } from 'react';
+import useRefresh from './use-refresh';
 
 const isObject = (type) =>
-  Object.prototype.toString.call(type) === "[object Object]";
+  Object.prototype.toString.call(type) === '[object Object]';
 
 const depsAreSame = (
   oldDeps: DependencyList,
-  deps: DependencyList
+  deps: DependencyList,
 ): boolean => {
   if (oldDeps === deps) return true;
   for (let i = 0; i < oldDeps.length; i++) {
@@ -38,7 +38,7 @@ const proxyMap = new WeakMap();
 const rawMap = new WeakMap();
 function observer<T extends Record<string, any>>(
   initialVal: T,
-  cb: () => void
+  cb: () => void,
 ): T {
   const existingProxy = proxyMap.get(initialVal);
   // 添加缓存 防止重新构建proxy

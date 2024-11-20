@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import type { useEffect, useLayoutEffect } from "react";
+import React, { useRef } from 'react';
+import type { useEffect, useLayoutEffect } from 'react';
 
 type EffectHookType = typeof useEffect | typeof useLayoutEffect;
 

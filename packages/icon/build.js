@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** 自动将svg 文件夹下的文件，转为 React 组件 */
 const fs = require('fs-extra');
 const chalk = require('chalk');
@@ -61,7 +62,7 @@ function getCamelString(name) {
 }
 const svgs = glob.sync('./svg/*.svg');
 
-const indexContent = [`import './index.less';`];
+const indexContent = ['import \'./index.less\';'];
 const docContent = [];
 
 svgs.forEach((svgPath) => {

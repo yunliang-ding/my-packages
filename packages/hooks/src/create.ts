@@ -1,5 +1,7 @@
-import cloneDeep from "lodash.clonedeep";
-import useSyncExternalStoreExports from "use-sync-external-store/shim";
+/* eslint-disable array-callback-return */
+/* eslint-disable react-hooks/rules-of-hooks */
+import cloneDeep from 'lodash.clonedeep';
+import useSyncExternalStoreExports from 'use-sync-external-store/shim';
 
 const { useSyncExternalStore } = useSyncExternalStoreExports;
 
@@ -43,7 +45,7 @@ class InitStore {
   useSnapshot() {
     const initStore = useSyncExternalStore(this.subscribe, this.getSnapshot);
     Object.keys(initStore).forEach((key) => {
-      if (typeof initStore[key] === "function") {
+      if (typeof initStore[key] === 'function') {
         initStore[key] = initStore[key].bind(this); // bind this
       }
     });
@@ -61,7 +63,9 @@ export default <T extends BadProp<T>>(initialStore: T & ThisType<T>) => {
   /** 对 initStore 取值进行监听 */
   const store: InitProps = new Proxy(initStore, {
     get: (target, propKey, receiver) => {
-      if (!["subscribe", "getSnapshot", "useSnapshot"].includes(propKey as string)) {
+      if (
+        !['subscribe', 'getSnapshot', 'useSnapshot'].includes(propKey as string)
+      ) {
         return initStore.state[propKey];
       }
       return Reflect.get(target, propKey, receiver);

@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 export default (hrefs: string | string[]) => {
   if (!Array.isArray(hrefs)) {
     hrefs = [hrefs];

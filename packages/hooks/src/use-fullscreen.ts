@@ -1,8 +1,8 @@
-import { useEffect, useState, useRef } from "react";
-import type { MutableRefObject } from "react";
-import screenfull from "screenfull";
-import useMemoizedFn from "./use-memoized";
-import { isBoolean, isFunction } from "./util";
+import { useEffect, useState, useRef } from 'react';
+import type { MutableRefObject } from 'react';
+import screenfull from 'screenfull';
+import useMemoizedFn from './use-memoized';
+import { isBoolean, isFunction } from './util';
 
 type BasicTarget<T extends TargetType = Element> =
   | (() => TargetValue<T>)
@@ -15,7 +15,7 @@ type TargetType = HTMLElement | Element | Window | Document;
 
 const getTargetElement = <T extends TargetType>(
   target: BasicTarget<T>,
-  defaultElement?: T
+  defaultElement?: T,
 ) => {
   if (!target) {
     return defaultElement;
@@ -25,7 +25,7 @@ const getTargetElement = <T extends TargetType>(
 
   if (isFunction(target)) {
     targetElement = target();
-  } else if ("current" in target) {
+  } else if ('current' in target) {
     targetElement = target.current;
   } else {
     targetElement = target;
@@ -53,17 +53,11 @@ export interface Options {
 
 export default (target: BasicTarget, options?: Options) => {
   const { onExit, onEnter, pageFullscreen = false } = options || {};
-  const { className = "ahooks-page-fullscreen", zIndex = 999999 } =
+  const { className = 'ahooks-page-fullscreen', zIndex = 999999 } =
     isBoolean(pageFullscreen) || !pageFullscreen ? {} : pageFullscreen;
 
   const onExitRef = useLatest(onExit);
   const onEnterRef = useLatest(onEnter);
-
-  // The state of full screen may be changed by other scripts/components,
-  // so the initial value needs to be computed dynamically.
-  const [state, setState] = useState(getIsFullscreen);
-  const stateRef = useRef(getIsFullscreen());
-
   function getIsFullscreen() {
     return (
       screenfull.isEnabled &&
@@ -71,7 +65,10 @@ export default (target: BasicTarget, options?: Options) => {
       screenfull.element === getTargetElement(target)
     );
   }
-
+  // The state of full screen may be changed by other scripts/components,
+  // so the initial value needs to be computed dynamically.
+  const [state, setState] = useState(getIsFullscreen);
+  const stateRef = useRef(getIsFullscreen());
   const invokeCallback = (fullscreen: boolean) => {
     if (fullscreen) {
       onEnterRef.current?.();
@@ -107,8 +104,8 @@ export default (target: BasicTarget, options?: Options) => {
       el.classList.add(className);
 
       if (!styleElem) {
-        styleElem = document.createElement("style");
-        styleElem.setAttribute("id", className);
+        styleElem = document.createElement('style');
+        styleElem.setAttribute('id', className);
         styleElem.textContent = `
           .${className} {
             position: fixed; left: 0; top: 0; right: 0; bottom: 0;
@@ -175,10 +172,10 @@ export default (target: BasicTarget, options?: Options) => {
       return;
     }
 
-    screenfull.on("change", onScreenfullChange);
+    screenfull.on('change', onScreenfullChange);
 
     return () => {
-      screenfull.off("change", onScreenfullChange);
+      screenfull.off('change', onScreenfullChange);
     };
   }, []);
 

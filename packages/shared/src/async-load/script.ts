@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 export default (srcs: string | string[]) => {
   if (!Array.isArray(srcs)) {
     srcs = [srcs];

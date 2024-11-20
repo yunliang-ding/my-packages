@@ -32,7 +32,8 @@ const search =  [
   dateRangePicker,
   cascader,
   treeselect,
-]
+];
+
 export default {
   base: [
     ...search,

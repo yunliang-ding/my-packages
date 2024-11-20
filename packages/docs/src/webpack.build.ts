@@ -2,7 +2,6 @@ import { resolve } from 'path';
 import { merge } from 'webpack-merge';
 import common from './common';
 import { ConfigProps } from './type';
-import { writeFileSync, readFileSync } from 'fs-extra';
 import webpack from 'webpack';
 import chalk from 'chalk';
 import { createLyr, createIndexHtml } from '.';
