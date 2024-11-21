@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const chokidar = require('chokidar');
 const chalk = require('chalk');
 const { build } = require('esbuild');
@@ -23,10 +24,10 @@ const runEsmBuild = () => {
       }),
     ],
   });
-}
-  
+};
+
 /** 监听 src 文件改动 */
-const watcher = chokidar.watch([`packages/code-editor/src/**/*`], {
+const watcher = chokidar.watch(['packages/code-editor/src/**/*'], {
   ignored: /node_modules/,
   ignoreInitial: true,
 });
