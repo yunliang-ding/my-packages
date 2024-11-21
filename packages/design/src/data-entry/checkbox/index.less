@@ -61,21 +61,6 @@
       padding-left: 8px;
     }
   }
-  .yld-checkbox-checked {
-    &:hover {
-      .yld-checkbox-hover {
-        display: none;
-      }
-    }
-    .yld-checkbox-inner {
-      background-color: var(--primary-color);
-      border-color: var(--primary-color);
-      &::after {
-        transform: rotate(45deg) scale(1) translate(-50%, -50%);
-        opacity: 1;
-      }
-    }
-  }
   // disabled
   .yld-checkbox-disabled {
     cursor: not-allowed;
@@ -93,6 +78,21 @@
     & + span {
       color: #aaa;
       cursor: not-allowed;
+    }
+  }
+  .yld-checkbox-checked {
+    &:hover {
+      .yld-checkbox-hover {
+        display: none;
+      }
+    }
+    .yld-checkbox-inner {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      &::after {
+        transform: rotate(45deg) scale(1) translate(-50%, -50%);
+        opacity: 1;
+      }
     }
   }
 }

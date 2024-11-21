@@ -26,7 +26,7 @@ import { useState } from 'react';
 import { CheckGroup } from '@yl-d/design';
 
 export default () => {
-  const [value, setValue] = useState(['React']);
+  const [value, setValue] = useState(['React', 'Vue']);
   const options = [
     {
       label: 'Html',
